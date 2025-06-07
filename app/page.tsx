@@ -1,40 +1,25 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import GameCanvas from "@/components/game-canvas";
 
 export default function Home() {
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const [canvasSize, setCanvasSize] = useState({ width: 1920, height: 1080 });
-
-  // maintain
-  useEffect(() => {
-    const resizeCanvas = () => {
-      const wrapper = wrapperRef.current;
-      if (!wrapper) return;
-
-      const { clientWidth: w, clientHeight: h } = wrapper;
-
-      let width = w;
-      let height = (w * 9) / 16;
-      if (height > h) {
-        height = h;
-        width = (h * 16) / 9;
-      }
-
-      setCanvasSize({ width, height });
-    };
-
-    resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-    return () => window.removeEventListener("resize", resizeCanvas);
-  }, []);
-
   return (
-    <div
-      ref={wrapperRef}
-      className="w-screen h-screen flex items-center justify-center bg-gray-300"
-    >
-      <GameCanvas width={canvasSize.width} height={canvasSize.height} />
+    <div className="w-screen h-screen flex flex-col items-center justify-center">
+      <h1 className="text-5xl font-header mb-2">Andrew Yong</h1>
+      <p className="text-xl font-sans mb-8">Click to describe Andrew</p>
+
+      <div className="grid grid-cols-2">
+        <p>Concaly</p>
+        <div className="flex gap-2">
+          <div className="w-4 h-4 bg-amber-200 rounded-full" />
+          <div className="w-4 h-4 bg-amber-200 rounded-full" />
+          <div className="w-4 h-4 bg-amber-200 rounded-full" />
+        </div>
+        <p>Mudboard</p>
+        <div className="flex gap-2">
+          <div className="w-4 h-4 bg-amber-200 rounded-full" />
+          <div className="w-4 h-4 bg-amber-200 rounded-full" />
+          <div className="w-4 h-4 bg-amber-200 rounded-full" />
+        </div>
+      </div>
     </div>
   );
 }

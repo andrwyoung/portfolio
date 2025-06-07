@@ -3,13 +3,45 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-header: var(--font-kumbh-sans);
+  --font-body: var(--font-mulish);
+  --font-logo: var(--font-figtree);
 }
 
+
+/* PROJECT: Inquiryon */
+.project-inquiryon {
+  --font-header: var(--font-inquiryon-header);
+  --font-body: var(--font-mulish);
+  --font-logo: var(--font-inquiryon-logo);
+}
+
+/* PROJECT: Concaly */
+.project-concaly {
+  --font-header: var(--font-concaly-header);
+  --font-body: var(--font-mulish);
+  --font-logo: var(--font-concaly-logo);
+}
+
+/* PROJECT: Mudboard */
+.project-mudboard {
+  --font-header: var(--font-mudboard-header);
+  --font-body: var(--font-mudboard-body);
+  --font-logo: 'Sweety Rasty', cursive;
+  --font-mono: var(--font-mudboard-mono);
+}
 
 
 @font-face {
   font-family: 'Sansation';
   src: url('/fonts/Sansation-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sweety Rasty';
+  src: url('/fonts/sweety-rasty.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -35,8 +67,16 @@
   }
 }
 
+
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Sansation', Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
+}
+
+h1, h2 {
+  font-family: var(--font-header), sans-serif;
+}
+
+.logo {
+  font-family: var(--font-logo), sans-serif;
 }
