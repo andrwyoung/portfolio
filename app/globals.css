@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin 'tailwind-scrollbar';
 
 :root {
   --background: #ffffff;
@@ -73,7 +74,7 @@
  
   --font-logo: var(--font-kumbh-sans);
   --font-header: 'Sansation', sans-serif;
-  --font-sans: var(--font-figtree);
+  --font-body: var(--font-figtree);
 
   --font-inquiryon-header: var(--font-inquiryon-header);
   --font-inquiryon-body: var(--font-mulish);

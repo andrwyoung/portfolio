@@ -8,6 +8,7 @@ import { MdEmail } from "react-icons/md";
 import { AnimatePresence, motion } from "framer-motion";
 import { SocialIcon } from "@/components/social-icon";
 import FillingDot from "@/components/filled-dot";
+import { NewsletterForm } from "@/components/newsletter";
 
 export default function Home() {
   const [active, setActive] = useState<ProjectType | null>(null);
@@ -46,22 +47,30 @@ export default function Home() {
         >
           Andrew Yong
         </h1>
-        <p className={`text-md mb-8 ${activeFontBody}`}>
-          I code and design products from 0 to 1
+        {/* <p className={`text-md mb-0.5 ${activeFontBody}`}>
+          I like building and learning across disciplines.
+        </p> */}
+        <p className={`text-sm mb-4 max-w-sm text-center ${activeFontBody}`}>
+          I&apos;ve coded + designed products, and walked across the country. I
+          don&apos;t know what&apos;s next, but come for the ride!
         </p>
+
+        <div className="mb-8">
+          <NewsletterForm />
+        </div>
 
         {/* Project buttons */}
         <p
           className={`text-xs mb-4 font-semibold ${active ? "" : "underline"}`}
         >
-          Choose a project:
+          Explore a Chapter:
         </p>
         <div
           className={`flex flex-col gap-2 mb-12 -translate-x-[1px] ${
             active ? "items-end" : "items-center"
           }`}
         >
-          {(["concaly", "mudboard", "inquiryon"] as const).map((project) => {
+          {(["mudboard", "concaly", "inquiryon"] as const).map((project) => {
             const isActive = active === project;
             const style = projectStyles[project];
 
@@ -113,7 +122,7 @@ export default function Home() {
             className={activeHoverColor}
           />
         </div>
-        <div className="flex flex-row gap-2 font-header text-sm">
+        {/* <div className="flex flex-row gap-2 font-header text-sm">
           <a
             href="https://www.jonadrew.com/"
             target="_blank"
@@ -130,7 +139,7 @@ export default function Home() {
           >
             Blog
           </a>
-        </div>
+        </div> */}
       </div>
 
       {/* Right side: dynamic project preview */}
