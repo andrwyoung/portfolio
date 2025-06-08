@@ -3,34 +3,44 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-header: var(--font-kumbh-sans);
-  --font-body: var(--font-mulish);
-  --font-logo: var(--font-figtree);
+
+  --primary: #FFB163;
+  --secondary: #8A86F9;
+
+  --concaly-primary: oklch(0.9 0.0854 76.11);
+  --concaly-primary-darker: oklch(0.8 0.1025 61.66);
+  --concaly-primary-muted: oklch(0.64 0.0236 65.12);
+  --concaly-primary-text: oklch(0.42 0.0599 73.42);
+  --concaly-primary-light: oklch(0.95 0.0444 79.31);
+  --concaly-primary-lightest: oklch(0.97 0.0248 81.13);
+  --concaly-secondary: oklch(0.81 0.107 312.58);
+  --concaly-secondary-darker: oklch(0.61 0.107 312.58);
+  --concaly-secondary-light: oklch(0.93 0.0367 316.19);
+  --concaly-secondary-lightest: oklch(0.96 0.0237 313.14);
+
+  --inquiryon-primary: oklch(41.16% 0.0265 240.09);
+  --inquiryon-primary-foreground: oklch(96.72% 0 0);
+--inquiryon-mid-grey: oklch(70% 0.0265 240.09);
+--inquiryon-dark-grey: oklch(48% 0.0265 240.09);
+--inquiryon-secondary: oklch(96.72% 0 0);
+--inquiryon-accent: oklch(82.65% 0.0996 214.42);
+--inquiryon-accent-foreground: oklch(72.58% 0.097 214.54);
+
+--mudboard-primary: oklch(0.53 0.0351 20.8);
+--mudboard-primary-lighter: oklch(0.60 0.031 20.8);
+--mudboard-primary-darker: oklch(0.43 0.0351 20.8);
+--mudboard-primary-text: oklch(1 0 0);
+--mudboard-primary-foreground: oklch(1 0 0);
+--mudboard-secondary: oklch(0.87 0.0871 58.96);
+--mudboard-secondary-lighter: oklch(0.93 0.0971 55.96);
+--mudboard-secondary-foreground: oklch(1 0 0);
+--mudboard-grey-light: oklch(0.93 0 0);
+--mudboard-grey-mid: oklch(0.68 0.0083 48.6);
+--mudboard-muted: oklch(0.97 0 0);
+--mudboard-muted-foreground: oklch(0.556 0 0);
+--mudboard-accent: oklch(0.8 0.1828 151);
+--mudboard-accent-foreground: oklch(0.205 0 0);
 }
-
-
-/* PROJECT: Inquiryon */
-.project-inquiryon {
-  --font-header: var(--font-inquiryon-header);
-  --font-body: var(--font-mulish);
-  --font-logo: var(--font-inquiryon-logo);
-}
-
-/* PROJECT: Concaly */
-.project-concaly {
-  --font-header: var(--font-concaly-header);
-  --font-body: var(--font-mulish);
-  --font-logo: var(--font-concaly-logo);
-}
-
-/* PROJECT: Mudboard */
-.project-mudboard {
-  --font-header: var(--font-mudboard-header);
-  --font-body: var(--font-mudboard-body);
-  --font-logo: 'Sweety Rasty', cursive;
-  --font-mono: var(--font-mudboard-mono);
-}
-
 
 @font-face {
   font-family: 'Sansation';
@@ -56,8 +66,61 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-kumbh-sans);
+
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+ 
+  --font-logo: var(--font-kumbh-sans);
   --font-header: 'Sansation', sans-serif;
+  --font-sans: var(--font-figtree);
+
+  --font-inquiryon-header: var(--font-inquiryon-header);
+  --font-inquiryon-body: var(--font-mulish);
+  --font-inquiryon-logo: var(--font-inquiryon-logo);
+
+  --font-concaly-header: var(--font-concaly-header);
+  --font-concaly-body: var(--font-mulish);
+  --font-concaly-logo: var(--font-concaly-logo);
+
+  --font-mudboard-header: var(--font-mudboard-header);
+  --font-mudboard-body: var(--font-mudboard-body);
+  --font-mudboard-logo: 'Sweety Rasty', cursive;
+  --font-mudboard-mono: var(--font-mudboard-mono);
+
+  --color-concaly-primary: var(--concaly-primary);
+  --color-concaly-primary-darker: var(--concaly-primary-darker);
+  --color-concaly-primary-muted: var(--concaly-primary-muted);
+  --color-concaly-primary-text: var(--concaly-primary-text);
+  --color-concaly-primary-light: var(--concaly-primary-light);
+  --color-concaly-primary-lightest: var(--concaly-primary-lightest);
+  --color-concaly-secondary: var(--concaly-secondary);
+  --color-concaly-secondary-darker: var(--concaly-secondary-darker);
+  --color-concaly-secondary-light: var(--concaly-secondary-light);
+  --color-concaly-secondary-lightest: var(--concaly-secondary-lightest);
+
+  --color-inquiryon-primary: var(--inquiryon-primary);
+  --color-inquiryon-primary-foreground: var(--inquiryon-primary-foreground);
+  --color-inquiryon-mid-grey: var(--inquiryon-mid-grey);
+  --color-inquiryon-dark-grey: var(--inquiryon-dark-grey);
+  --color-inquiryon-secondary: var(--inquiryon-secondary);
+  --color-inquiryon-accent: var(--inquiryon-accent);
+  --color-inquiryon-accent-foreground: var(--inquiryon-accent-foreground);
+
+  --color-mudboard-primary: var(--mudboard-primary);
+--color-mudboard-primary-lighter: var(--mudboard-primary-lighter);
+--color-mudboard-primary-darker: var(--mudboard-primary-darker);
+--color-mudboard-primary-text: var(--mudboard-primary-text);
+--color-mudboard-primary-foreground: var(--mudboard-primary-foreground);
+--color-mudboard-secondary: var(--mudboard-secondary);
+--color-mudboard-secondary-lighter: var(--mudboard-secondary-lighter);
+--color-mudboard-secondary-foreground: var(--mudboard-secondary-foreground);
+--color-mudboard-grey-light: var(--mudboard-grey-light);
+--color-mudboard-grey-mid: var(--mudboard-grey-mid);
+--color-mudboard-muted: var(--mudboard-muted);
+--color-mudboard-muted-foreground: var(--mudboard-muted-foreground);
+--color-mudboard-accent: var(--mudboard-accent);
+--color-mudboard-accent-foreground: var(--mudboard-accent-foreground);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,7 +130,7 @@
   }
 }
 
-
+/* 
 
 body {
   font-family: var(--font-body), sans-serif;
@@ -79,4 +142,4 @@ h1, h2 {
 
 .logo {
   font-family: var(--font-logo), sans-serif;
-}
+} */
