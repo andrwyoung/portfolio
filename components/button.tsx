@@ -8,34 +8,22 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const buttonVariants = cva(
-  "flex flex-row gap-1.5 items-center justify-center cursor-pointer rounded-md font-semibold transition-all" +
+  "flex flex-row gap-1.5 items-center justify-center cursor-pointer rounded-md  transition-all" +
     "focus:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50" +
-    "disabled:pointer-events-none px-3 py-1 duration-300",
+    "disabled:pointer-events-none duration-300",
   {
     variants: {
       variant: {
-        default:
-          "bg-primary border-primary text-white hover:text-primary hover:bg-accent",
-        secondary:
-          "bg-white border-white text-primary hover:bg-accent hover:text-white",
-        white:
-          "bg-white text-primary-darker border-white hover:bg-secondary-lighter",
-        destructive:
-          "bg-rose-400 outline-2 outline-rose-400 text-white  hover:outline-rose-500 hover:bg-rose-300",
-        accent: "bg-white text-primary hover:bg-white",
-        outline:
-          "bg-transparent outline-2 outline-white text-white hover:bg-white/30 ",
-        v2: "bg-transparent outline-2 outline-mudboard-primary text-primary hover:bg-mudboard-secondary/50 ",
         mudboard:
-          "bg-transparent font-mudboard-header outline-2 outline-white text-white hover:text-mudboard-accent hover:outline-mudboard-accent",
+          "text-sm px-3 py-1 bg-transparent font-mudboard-header font-semibold outline-2 outline-white text-white hover:text-mudboard-accent hover:outline-mudboard-accent",
         concaly:
-          "bg-concaly-secondary-lightest rounded-full outline-2 outline-concaly-secondary",
+          "text-sm px-3 py-1  text-concaly-primary-text font-semibold bg-concaly-secondary-lightest rounded-lg outline-2 outline-concaly-secondary hover:bg-concaly-secondary",
         inquiryon:
-          "hover:bg-inquiryon-accent hover:text-inquiryon-accent-foreground dark:hover:bg-inquiryon-accent/50",
+          "text-sm px-4 py-1 font-medium text-inquiryon-primary bg-inquiryon-accent hover:bg-inquiryon-accent hover:text-inquiryon-accent-foreground ",
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "concaly",
     },
   }
 );

@@ -3,6 +3,7 @@ export const projectStyles: Record<
   string,
   {
     header: string;
+    link: string;
     logo_src: string;
     fonts: {
       logo: string;
@@ -33,7 +34,8 @@ export const projectStyles: Record<
 > = {
   concaly: {
     header: "ConCaly",
-    logo_src: "concaly-logo.png",
+    link: "https://www.concaly.app",
+    logo_src: "/concaly-logo.png",
     fonts: {
       logo: "font-concaly-logo",
       header: "font-concaly-header",
@@ -62,7 +64,8 @@ export const projectStyles: Record<
   },
   mudboard: {
     header: "Mudboard",
-    logo_src: "mudboard-logo.png",
+    link: "https://www.mudboard.com/",
+    logo_src: "/mudboard-logo.png",
     fonts: {
       logo: "font-mudboard-logo",
       header: "font-mudboard-header",
@@ -92,7 +95,8 @@ export const projectStyles: Record<
   },
   inquiryon: {
     header: "Inquiryon",
-    logo_src: "inquiryon-logo.png",
+    link: "https://www.inquiryon.com/",
+    logo_src: "/inquiryon-logo.png",
     fonts: {
       logo: "font-inquiryon-logo",
       header: "font-inquiryon-header",
