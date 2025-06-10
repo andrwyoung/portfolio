@@ -21,7 +21,8 @@ const buttonVariants = cva(
         inquiryon:
           "text-sm px-4 py-1 font-medium text-inquiryon-primary bg-inquiryon-accent hover:bg-inquiryon-accent hover:text-inquiryon-accent-foreground ",
         pct: "",
-        jonadrew: "",
+        jonadrew:
+          "font-bold px-4 py-0.5  border-2 bg-jonadrew-accent border-jonadrew-accent hover:border-jonadrew-secondary hover:bg-jonadrew-accent/80",
       },
     },
     defaultVariants: {

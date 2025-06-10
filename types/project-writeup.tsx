@@ -1,11 +1,22 @@
 import {
+  FaBook,
   FaBookSkull,
   FaBoxesStacked,
+  FaCalendarDay,
+  FaCloudShowersWater,
   FaGasPump,
+  FaHammer,
+  FaImages,
+  FaLeaf,
+  FaMountainSun,
+  FaPaintRoller,
   FaPencil,
+  FaSkull,
+  FaTree,
 } from "react-icons/fa6";
 import type { ProjectType } from "./project-styles";
 import { InlineLinkListItem } from "@/components/hyperlink";
+import { FaEdit, FaMapMarkerAlt, FaPaintBrush } from "react-icons/fa";
 
 export const projectContent: Record<
   ProjectType,
@@ -17,7 +28,7 @@ export const projectContent: Record<
       icon?: React.ReactNode;
       content: React.ReactNode;
     }[];
-    isLandscapes?: boolean;
+    columns?: number; // default is 1
     screenshots?: { src: string; alt: string }[];
   }
 > = {
@@ -26,7 +37,9 @@ export const projectContent: Record<
       <p>
         Concaly is a convention planning tool for artists and vendors. It
         aggregates data for 2,000+ cons and helps users visualize deadlines,
-        travel, and booth schedules on a responsive map and calendar.
+        travel, and booth schedules on a responsive map and calendar. It was
+        significant for me personally because it marked a return to coding —
+        armed with all the skills from my illustration background.
       </p>
     ),
     why: (
@@ -38,8 +51,8 @@ export const projectContent: Record<
     ),
     previewSections: [
       {
-        title: "Write-up",
-        icon: <FaPencil />,
+        title: "Other Links",
+        icon: <FaEdit />,
         content: (
           <a
             href="https://notion.so/concaly"
@@ -53,19 +66,22 @@ export const projectContent: Record<
       },
       {
         title: "Role",
-        icon: "🛠️",
+        icon: <FaMapMarkerAlt />,
         content: <p>Built it myself</p>,
       },
       {
         title: "Stack",
-        icon: <FaBoxesStacked />,
+        icon: <FaCalendarDay />,
         content: <p>Supabase Something</p>,
       },
     ],
     screenshots: [
-      { src: "/images/concaly-calendar.png", alt: "Calendar view" },
-      { src: "/images/concaly-map.png", alt: "Map view" },
-      { src: "/images/concaly-modal.png", alt: "Edit modal view" },
+      { src: "/concaly/1.png", alt: "Map view" },
+      { src: "/concaly/3.png", alt: "Calendar view" },
+      { src: "/concaly/2.png", alt: "Selected Con" },
+      { src: "/concaly/5.png", alt: "Edit Artist Alley Panel" },
+      { src: "/concaly/4.png", alt: "Edit Convention Info Panel" },
+      { src: "/concaly/6.png", alt: "Suggestions/Updates page" },
     ],
   },
 
@@ -85,7 +101,7 @@ export const projectContent: Record<
     previewSections: [
       {
         title: "Write-up",
-        icon: <FaPencil />,
+        icon: <FaPaintBrush />,
         content: (
           <a
             href="https://notion.so/concaly"
@@ -99,18 +115,22 @@ export const projectContent: Record<
       },
       {
         title: "Role",
-        icon: "🛠️",
+        icon: <FaLeaf />,
         content: <p>Built it myself</p>,
       },
       {
         title: "Stack",
-        icon: <FaBoxesStacked />,
+        icon: <FaImages />,
         content: <p>Supabase Something</p>,
       },
     ],
     screenshots: [
-      { src: "/images/mudboard-1.png", alt: "Board interface" },
-      { src: "/images/mudboard-2.png", alt: "Collaboration in action" },
+      { src: "/mudboard/0.png", alt: "Gallery View" },
+      // { src: "/mudboard/1.png", alt: "Gallery View 2" },
+      { src: "/mudboard/2.png", alt: "Overlay Gallery View" },
+      { src: "/mudboard/3.png", alt: "Dashboard" },
+      { src: "/mudboard/4.png", alt: "Split Screen" },
+      { src: "/mudboard/5.png", alt: "Landing Page" },
     ],
   },
   pct: {
@@ -150,8 +170,49 @@ export const projectContent: Record<
     ),
     previewSections: [
       {
+        title: "Stats",
+        icon: <FaTree />,
+        content: (
+          <ul className="">
+            <li>- Longest day: 42.6 mi</li>
+            <li>- Total days: 105 days</li>
+            <li className="flex flex-col w-fit">
+              - Marathon days (26.2+ mi): 24
+              <span className="text-xs px-4 text-neutral-500">
+                (longest streak: 6 days)
+              </span>
+            </li>
+            <li>- Hitchhikes: 19</li>
+            <li>- Bears: 0</li>
+          </ul>
+        ),
+      },
+
+      {
+        title: "Gear",
+        icon: <FaCloudShowersWater />,
+        content: (
+          <ul className="space-y-1">
+            <InlineLinkListItem
+              label="How I sewed my gear"
+              links={[
+                "https://jondrew.notion.site/Sewing-Gear-19b2e809fa4e801192f0c21c806f1605",
+              ]}
+              accentClass="text-pct-accent"
+            />
+            <InlineLinkListItem
+              label="Full Gear breakdown"
+              links={[
+                "https://docs.google.com/spreadsheets/d/1Fc8pnEkADU9mpBzUXr92X5dH3Zhp9lKf_4nuR_rWyZY/edit?gid=0#gid=0",
+              ]}
+              accentClass="text-pct-accent"
+            />
+          </ul>
+        ),
+      },
+      {
         title: "Reflections",
-        icon: <FaPencil />,
+        icon: <FaMountainSun />,
         content: (
           <ul className="space-y-1">
             <InlineLinkListItem
@@ -176,49 +237,8 @@ export const projectContent: Record<
           </ul>
         ),
       },
-      {
-        title: "Gear",
-        icon: <FaBookSkull />,
-        content: (
-          <ul className="space-y-1">
-            <InlineLinkListItem
-              label="How I sewed my gear"
-              links={[
-                "https://jondrew.notion.site/Sewing-Gear-19b2e809fa4e801192f0c21c806f1605",
-              ]}
-              accentClass="text-pct-accent"
-            />
-            <InlineLinkListItem
-              label="Full Gear breakdown"
-              links={[
-                "https://docs.google.com/spreadsheets/d/1Fc8pnEkADU9mpBzUXr92X5dH3Zhp9lKf_4nuR_rWyZY/edit?gid=0#gid=0",
-              ]}
-              accentClass="text-pct-accent"
-            />
-          </ul>
-        ),
-      },
-
-      {
-        title: "Stats",
-        icon: <FaGasPump />,
-        content: (
-          <ul className="">
-            <li>- Longest day: 42.6 mi</li>
-            <li>- Total days: 105 days</li>
-            <li className="flex flex-col w-fit">
-              - Marathon days (26.2+ mi): 24
-              <span className="text-xs px-4 text-neutral-500">
-                (longest streak: 6 days)
-              </span>
-            </li>
-            <li>- Hitchhikes: 19</li>
-            <li>- Bears: 0</li>
-          </ul>
-        ),
-      },
     ],
-    isLandscapes: true,
+    columns: 2,
     screenshots: [
       { src: "/pct/1.webp", alt: "Washington" },
       { src: "/pct/2.webp", alt: "California. Silver Lake" },
@@ -237,47 +257,92 @@ export const projectContent: Record<
   jonadrew: {
     what: (
       <p>
-        In 2023, I left my job to pursue illustration full time — a return to
-        the creative thread that started it all. Jonadrew is a digital home for
-        that work: a personal brand, a playground, and a slow unfolding of what
-        it means to make art seriously.
+        In September of 2022, I left my high-paying software job to pursue{" "}
+        <strong>illustration full-time</strong>. In the process, I learned
+        everything I didn’t know about publishing, client work, marketing, and
+        running a business. I illustrated book covers, worked on board games,
+        tabled at conventions, and created comics.
       </p>
     ),
     why: (
-      <p>
-        I learned to value slow progress. Drawing doesn’t reward speed — it
-        rewards attention, iteration, and showing up when things aren’t working.
-        I also had to decouple identity from output. Some days, nothing looked
-        right. Some weeks, nothing shipped. But I kept going — not to prove
-        anything, just to keep learning.
-      </p>
+      <>
+        <p>
+          I left my job because of the desire for freedom, and the dread of a
+          life I would have lived if I stayed. But I quickly learned how steep
+          the cost of freedom was.
+        </p>
+        <p className="mt-4">
+          I imagined I would be drawing all day. Instead, I was cold-emailing
+          publishers, digging through Facebook groups and learning that sales,
+          not skills alone, is what moves the needle.
+        </p>
+
+        <p className="mt-4">
+          And by all external measures I'm not very successful. I made little
+          money and my follower count is underwhelming, yet I'm{" "}
+          <strong>so happy and proud</strong> of myself for{" "}
+          <strong>just trying</strong> and taking that leap. That's successful
+          to me. And who knows, maybe the rest will catch up eventually.
+        </p>
+      </>
     ),
     previewSections: [
       {
-        title: "Published",
+        title: "Drawings Stats",
         icon: <FaPencil />,
         content: (
-          <a
-            href="https://notion.so/concaly"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:opacity-80"
-          >
-            Read the full write-up →
-          </a>
+          <ul className="">
+            <li>- Drawing reps: over 8,000</li>
+            <li>- Comissions: ~50 clients</li>
+            <li>
+              - Revenue: <FaSkull className="inline" />
+            </li>
+          </ul>
         ),
       },
       {
-        title: "Drawings Done",
-        icon: "🛠️",
-        content: <p>Built it myself</p>,
+        title: "Works Published",
+        icon: <FaBook />,
+        content: (
+          <ul className="">
+            <InlineLinkListItem
+              label="Book cover set"
+              links={[
+                "https://www.kickstarter.com/projects/benwolf/two-kids-books-series-from-award-winning-author-ben-wolf",
+              ]}
+              accentClass="text-jonadrew-secondary"
+            />
+            <InlineLinkListItem
+              label="Call of Poohthulu"
+              links={[
+                "https://www.kickstarter.com/projects/1155362758/the-call-of-pooh-thulhu-cthulhu-comes-to-the-100-acre-woods",
+              ]}
+              accentClass="text-jonadrew-secondary"
+            />
+
+            <li>- Graphic Novel (Coming soon)</li>
+          </ul>
+        ),
       },
+
       {
-        title: "Stack",
-        icon: "⚙️",
-        content: <p>Supabase Something</p>,
+        title: "Tools",
+        icon: <FaPaintRoller />,
+        content: (
+          <ul className="">
+            <li className="flex flex-col w-fit">
+              - Clip Studio Paint Ex
+              <span className="text-xs px-4 text-neutral-500">
+                (In the past have used Procreate, Photoshop and Krita)
+              </span>
+            </li>
+            <li>- Huion Kamvas Pro 16</li>
+            <li>- Normal pencil + paper</li>
+          </ul>
+        ),
       },
     ],
+    columns: 3,
     screenshots: [
       { src: "/jonadrew/4-26c.webp", alt: "Close-up portrait with brown eyes" },
       { src: "/jonadrew/9-25.webp", alt: "Still life of a cracked open egg" },

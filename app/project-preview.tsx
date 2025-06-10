@@ -106,16 +106,21 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
               )}
             </h2>
             <div
-              className={`columns-1 md:columns-2  ${
-                content.isLandscapes ? " " : "xl:columns-3"
-              }  gap-4 space-y-4`}
+              className={`columns-1   ${
+                content.columns === 2 && "md:columns-2"
+              } ${
+                content.columns === 3 && "md:columns-2 xl:columns-3"
+              } gap-4 space-y-4`}
             >
               {content.screenshots.map((shot, i) => (
                 <img
                   key={i}
                   src={shot.src}
                   alt={shot.alt}
-                  className="mb-4 rounded-lg shadow w-full"
+                  className={`mb-4 rounded-lg shadow w-full ${
+                    active === "mudboard" &&
+                    "border-2 border-mudboard-secondary"
+                  }`}
                 />
               ))}
             </div>
