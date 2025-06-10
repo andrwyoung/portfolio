@@ -41,7 +41,7 @@ export default function Home() {
         <h1
           className={`text-5xl ${activeFontHeader} mb-2 transition-all duration-200
           select-none ${active ? `cursor-pointer ${activeHoverColor}` : ""} ${
-            active === "concaly" ? "font-medium" : ""
+            active === "concaly" || active === "jonadrew" ? "font-medium" : ""
           }`}
           onClick={() => setActive(null)}
         >
@@ -50,56 +50,65 @@ export default function Home() {
         {/* <p className={`text-md mb-0.5 ${activeFontBody}`}>
           I like building and learning across disciplines.
         </p> */}
-        <p className={`text-sm mb-4 max-w-sm text-center ${activeFontBody}`}>
-          I&apos;ve coded + designed products, and walked across the country. I
-          don&apos;t know what&apos;s next, but come for the ride!
+        <p
+          className={`mb-4 max-w-sm ${
+            active ? "text-right" : "text-center"
+          } ${activeFontBody} 
+          
+          ${active === "pct" ? "text-md leading-tight" : "text-sm"}`}
+        >
+          I&apos;ve coded + designed products, and walked across the country.
+          There&apos;s more ahead, so come along for the ride:
         </p>
 
-        <div className="mb-8">
+        <div className="flex gap-2 items-center mb-10">
           <NewsletterForm />
         </div>
 
         {/* Project buttons */}
+
         <p
-          className={`text-xs mb-4 font-semibold ${active ? "" : "underline"}`}
+          className={`text-xs mb-2 font-semibold ${active ? "" : "underline"}`}
         >
-          Explore a Chapter:
+          Choose a Chapter:
         </p>
         <div
           className={`flex flex-col gap-2 mb-12 -translate-x-[1px] ${
             active ? "items-end" : "items-center"
           }`}
         >
-          {(["mudboard", "concaly", "inquiryon"] as const).map((project) => {
-            const isActive = active === project;
-            const style = projectStyles[project];
+          {(["mudboard", "concaly", "pct", "jonadrew"] as const).map(
+            (project) => {
+              const isActive = active === project;
+              const style = projectStyles[project];
 
-            return (
-              <div
-                key={project}
-                className="flex gap-2 items-center group cursor-pointer"
-                title={`View ${style.header}`}
-                onClick={() =>
-                  setActive((prev) => (prev === project ? null : project))
-                }
-              >
-                <FillingDot
-                  color={style.colors.accent}
-                  borderColor={style.colors.border}
-                  selected={isActive}
-                />
-                <button
-                  type="button"
-                  className={`text-md w-fit transition-all cursor-pointer
+              return (
+                <div
+                  key={project}
+                  className="flex gap-2 items-center group cursor-pointer hover:underline"
+                  title={`View ${style.header}`}
+                  onClick={() =>
+                    setActive((prev) => (prev === project ? null : project))
+                  }
+                >
+                  <FillingDot
+                    color={style.colors.accent}
+                    borderColor={style.colors.border}
+                    selected={isActive}
+                  />
+                  <button
+                    type="button"
+                    className={`text-md w-fit transition-all cursor-pointer
                   rounded-lg font-header duration-300 
                     ${isActive ? "underline underline-offset-2" : ""}
                 `}
-                >
-                  {style.header}
-                </button>
-              </div>
-            );
-          })}
+                  >
+                    {style.header}
+                  </button>
+                </div>
+              );
+            }
+          )}
         </div>
 
         <div className="flex gap-4 items-center mb-1">

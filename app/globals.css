@@ -5,8 +5,9 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  --primary: #FFB163;
+  --primary: #ffdebe;
   --secondary: #8A86F9;
+  --secondary-text: #4e4ab1;
 
   --concaly-primary: oklch(0.9 0.0854 76.11);
   --concaly-primary-darker: oklch(0.8 0.1025 61.66);
@@ -21,26 +22,36 @@
 
   --inquiryon-primary: oklch(41.16% 0.0265 240.09);
   --inquiryon-primary-foreground: oklch(96.72% 0 0);
---inquiryon-mid-grey: oklch(70% 0.0265 240.09);
---inquiryon-dark-grey: oklch(48% 0.0265 240.09);
---inquiryon-secondary: oklch(96.72% 0 0);
---inquiryon-accent: oklch(82.65% 0.0996 214.42);
---inquiryon-accent-foreground: oklch(72.58% 0.097 214.54);
+  --inquiryon-mid-grey: oklch(70% 0.0265 240.09);
+  --inquiryon-dark-grey: oklch(48% 0.0265 240.09);
+  --inquiryon-secondary: oklch(96.72% 0 0);
+  --inquiryon-accent: oklch(82.65% 0.0996 214.42);
+  --inquiryon-accent-foreground: oklch(72.58% 0.097 214.54);
 
---mudboard-primary: oklch(0.53 0.0351 20.8);
---mudboard-primary-lighter: oklch(0.60 0.031 20.8);
---mudboard-primary-darker: oklch(0.43 0.0351 20.8);
---mudboard-primary-text: oklch(1 0 0);
---mudboard-primary-foreground: oklch(1 0 0);
---mudboard-secondary: oklch(0.87 0.0871 58.96);
---mudboard-secondary-lighter: oklch(0.93 0.0971 55.96);
---mudboard-secondary-foreground: oklch(1 0 0);
---mudboard-grey-light: oklch(0.93 0 0);
---mudboard-grey-mid: oklch(0.68 0.0083 48.6);
---mudboard-muted: oklch(0.97 0 0);
---mudboard-muted-foreground: oklch(0.556 0 0);
---mudboard-accent: oklch(0.8 0.1828 151);
---mudboard-accent-foreground: oklch(0.205 0 0);
+  --pct-primary: #c8ecce; 
+  --pct-secondary: #91d2f2; 
+  --pct-text: #22423b;
+  --pct-accent: #58b1e8;
+
+  --jonadrew-primary: #d4d6f4;
+  --jonadrew-secondary: #dc816d; 
+  --jonadrew-text: #22423b;
+  --jonadrew-accent: #f7b67e;
+
+  --mudboard-primary: oklch(0.53 0.0351 20.8);
+  --mudboard-primary-lighter: oklch(0.60 0.031 20.8);
+  --mudboard-primary-darker: oklch(0.43 0.0351 20.8);
+  --mudboard-primary-text: oklch(1 0 0);
+  --mudboard-primary-foreground: oklch(1 0 0);
+  --mudboard-secondary: oklch(0.87 0.0871 58.96);
+  --mudboard-secondary-lighter: oklch(0.93 0.0971 55.96);
+  --mudboard-secondary-foreground: oklch(1 0 0);
+  --mudboard-grey-light: oklch(0.93 0 0);
+  --mudboard-grey-mid: oklch(0.68 0.0083 48.6);
+  --mudboard-muted: oklch(0.97 0 0);
+  --mudboard-muted-foreground: oklch(0.556 0 0);
+  --mudboard-accent: oklch(0.8 0.1828 151);
+  --mudboard-accent-foreground: oklch(0.205 0 0);
 }
 
 @font-face {
@@ -68,9 +79,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-secondary-text: var(--secondary-text);
  
   --font-logo: var(--font-kumbh-sans);
   --font-header: 'Sansation', sans-serif;
@@ -88,6 +99,15 @@
   --font-mudboard-body: var(--font-mudboard-body);
   --font-mudboard-logo: 'Sweety Rasty', cursive;
   --font-mudboard-mono: var(--font-mudboard-mono);
+
+  --font-pct-logo: var(--font-pct-logo);
+  --font-pct-header: var(--font-pct-header);
+  --font-pct-body: var(--font-pct-body);
+  --font-pct-accent: var(--font-pct-accent);
+
+  --font-jonadrew-logo: var(--font-jonadrew-logo);
+  --font-jonadrew-header: var(--font-jonadrew-header);
+  --font-jonadrew-body: var(--font-jonadrew-body);
 
   --color-concaly-primary: var(--concaly-primary);
   --color-concaly-primary-darker: var(--concaly-primary-darker);
@@ -108,20 +128,30 @@
   --color-inquiryon-accent: var(--inquiryon-accent);
   --color-inquiryon-accent-foreground: var(--inquiryon-accent-foreground);
 
+  --color-pct-primary: var(--pct-primary);
+  --color-pct-secondary: var(--pct-secondary);
+  --color-pct-text: var(--pct-text);
+  --color-pct-accent: var(--pct-accent);
+
+  --color-jonadrew-primary: var(--jonadrew-primary);
+  --color-jonadrew-secondary: var(--jonadrew-secondary);
+  --color-jonadrew-text: var(--jonadrew-text);
+  --color-jonadrew-accent: var(--jonadrew-accent);
+
   --color-mudboard-primary: var(--mudboard-primary);
---color-mudboard-primary-lighter: var(--mudboard-primary-lighter);
---color-mudboard-primary-darker: var(--mudboard-primary-darker);
---color-mudboard-primary-text: var(--mudboard-primary-text);
---color-mudboard-primary-foreground: var(--mudboard-primary-foreground);
---color-mudboard-secondary: var(--mudboard-secondary);
---color-mudboard-secondary-lighter: var(--mudboard-secondary-lighter);
---color-mudboard-secondary-foreground: var(--mudboard-secondary-foreground);
---color-mudboard-grey-light: var(--mudboard-grey-light);
---color-mudboard-grey-mid: var(--mudboard-grey-mid);
---color-mudboard-muted: var(--mudboard-muted);
---color-mudboard-muted-foreground: var(--mudboard-muted-foreground);
---color-mudboard-accent: var(--mudboard-accent);
---color-mudboard-accent-foreground: var(--mudboard-accent-foreground);
+  --color-mudboard-primary-lighter: var(--mudboard-primary-lighter);
+  --color-mudboard-primary-darker: var(--mudboard-primary-darker);
+  --color-mudboard-primary-text: var(--mudboard-primary-text);
+  --color-mudboard-primary-foreground: var(--mudboard-primary-foreground);
+  --color-mudboard-secondary: var(--mudboard-secondary);
+  --color-mudboard-secondary-lighter: var(--mudboard-secondary-lighter);
+  --color-mudboard-secondary-foreground: var(--mudboard-secondary-foreground);
+  --color-mudboard-grey-light: var(--mudboard-grey-light);
+  --color-mudboard-grey-mid: var(--mudboard-grey-mid);
+  --color-mudboard-muted: var(--mudboard-muted);
+  --color-mudboard-muted-foreground: var(--mudboard-muted-foreground);
+  --color-mudboard-accent: var(--mudboard-accent);
+  --color-mudboard-accent-foreground: var(--mudboard-accent-foreground);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -131,6 +161,14 @@
   }
 }
 
+@layer utilities {
+
+  /* .font-pct-body {
+    font-family: var(--font-pct-body);
+    font-size: 1.02rem;
+  } */
+
+}
 /* 
 
 body {

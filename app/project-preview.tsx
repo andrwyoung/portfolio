@@ -13,7 +13,7 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
     {
       title: `Overview`,
       content: content.what,
-      className: "text-2xl",
+      className: `text-2xl `,
     },
     {
       title: "How did I grow?",
@@ -34,33 +34,40 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
         <div className={`text-4xl mb-4 ${style.fonts.logo}`}>
           {style.header}
         </div>
-        <Image
-          src={style.logo_src}
-          alt={`${style.header} Logo`}
-          width={512}
-          height={512}
-          className="w-[32px] h-[32px]"
-        />
+        {style.logo_src && (
+          <Image
+            src={style.logo_src}
+            alt={`${style.header} Logo`}
+            width={512}
+            height={512}
+            className="w-[32px] h-[32px]"
+          />
+        )}
       </div>
-      <a
-        href={style.link || "#"}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block mb-12"
-      >
-        <Button variant={active} className={style.fonts.header}>
-          Go to Live Site
-        </Button>
-      </a>
+
+      <div className=" mb-12">
+        {style.link && (
+          <a
+            href={style.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <Button variant={active} className={style.fonts.header}>
+              Go to Website
+            </Button>
+          </a>
+        )}
+      </div>
 
       <div className={``}>
         <div className={`max-w-xl space-y-6 mb-8`}>
           {sections.map(({ title, content, className }, i) => (
             <section key={i}>
               <h2
-                className={` mb-1 ${className} ${
-                  active !== "inquiryon" ? "font-semibold" : "font-medium"
-                } ${style.fonts.header}`}
+                className={` mb-1 ${className}
+                  font-semibold
+                ${style.fonts.header}`}
               >
                 {title}
               </h2>
@@ -70,36 +77,21 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
         </div>
 
         <section className="grid gap-2 sm:grid-cols-3 mb-16">
-          <div>
-            <h3 className={`text-lg mb-1 ${style.fonts.header}`}>
-              📝 Write-up
-            </h3>
-            <div className={style.fonts.body}>{content.writeup}</div>
-          </div>
-
-          <div>
-            <h3 className={`text-lg mb-1 ${style.fonts.header}`}>🛠️ Role</h3>
-            <div className={style.fonts.body}>{content.role}</div>
-          </div>
-
-          <div>
-            <h3 className={`text-lg mb-1 ${style.fonts.header}`}>⚙️ Stack</h3>
-            <div className="grid sm:grid-cols-2">
-              <div className={style.fonts.body}>{content.stack}</div>
-              <div className={style.fonts.body}>{content.stack}</div>
-              <div className={style.fonts.body}>{content.stack}</div>
-              <div className={style.fonts.body}>{content.stack}</div>
+          {content.previewSections.map(({ title, icon, content }) => (
+            <div key={title}>
+              <h3
+                className={`flex items-center gap-2 text-lg mb-1 font-semibold ${style.fonts.header}`}
+              >
+                <p className={style.colors.icon}>{icon}</p> <p>{title}</p>
+              </h3>
+              <div>{content}</div>
             </div>
-          </div>
+          ))}
         </section>
 
         {content.screenshots && content.screenshots.length > 0 && (
           <section>
-            <h2
-              className={`text-xl mb-1 ${
-                active !== "inquiryon" ? "font-semibold" : ""
-              } ${style.fonts.header}`}
-            >
+            <h2 className={`text-xl mb-1 font-semibold ${style.fonts.header}`}>
               Screenshots
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

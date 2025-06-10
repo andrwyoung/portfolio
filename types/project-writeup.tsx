@@ -1,4 +1,5 @@
 // types/project-content.ts
+import { FaPencil } from "react-icons/fa6";
 import type { ProjectType } from "./project-styles";
 
 export const projectContent: Record<
@@ -6,9 +7,11 @@ export const projectContent: Record<
   {
     what: React.ReactNode;
     why: React.ReactNode;
-    writeup: React.ReactNode;
-    role: React.ReactNode;
-    stack: React.ReactNode;
+    previewSections: {
+      title: string;
+      icon?: React.ReactNode;
+      content: React.ReactNode;
+    }[];
     screenshots?: { src: string; alt: string }[];
   }
 > = {
@@ -27,18 +30,32 @@ export const projectContent: Record<
         scales with the growing con circuit and artist community needs.
       </p>
     ),
-    writeup: (
-      <a
-        href="https://notion.so/concaly" // swap with your actual Notion link
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline hover:opacity-80"
-      >
-        Read the full write-up →
-      </a>
-    ),
-    role: <p>Built it myself</p>,
-    stack: <p>Supabase Somtehing</p>,
+    previewSections: [
+      {
+        title: "Write-up",
+        icon: <FaPencil />,
+        content: (
+          <a
+            href="https://notion.so/concaly"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:opacity-80"
+          >
+            Read the full write-up →
+          </a>
+        ),
+      },
+      {
+        title: "Role",
+        icon: "🛠️",
+        content: <p>Built it myself</p>,
+      },
+      {
+        title: "Stack",
+        icon: "⚙️",
+        content: <p>Supabase Something</p>,
+      },
+    ],
     screenshots: [
       { src: "/images/concaly-calendar.png", alt: "Calendar view" },
       { src: "/images/concaly-map.png", alt: "Map view" },
@@ -59,25 +76,38 @@ export const projectContent: Record<
         shared boards — without the constraints of folders or grids.
       </p>
     ),
-    writeup: (
-      <a
-        href="https://notion.so/mudboard"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline hover:opacity-80"
-      >
-        Mudboard case study →
-      </a>
-    ),
-    role: <p>Built it myself</p>,
-    stack: <p>Supabase Somtehing</p>,
+    previewSections: [
+      {
+        title: "Write-up",
+        icon: <FaPencil />,
+        content: (
+          <a
+            href="https://notion.so/concaly"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:opacity-80"
+          >
+            Read the full write-up →
+          </a>
+        ),
+      },
+      {
+        title: "Role",
+        icon: "🛠️",
+        content: <p>Built it myself</p>,
+      },
+      {
+        title: "Stack",
+        icon: "⚙️",
+        content: <p>Supabase Something</p>,
+      },
+    ],
     screenshots: [
       { src: "/images/mudboard-1.png", alt: "Board interface" },
       { src: "/images/mudboard-2.png", alt: "Collaboration in action" },
     ],
   },
-
-  inquiryon: {
+  pct: {
     what: (
       <p>
         Inquiryon is a landing page for a concept brand focused on research
@@ -90,18 +120,76 @@ export const projectContent: Record<
         high-fidelity, expressive landing page that plays with grid and type.
       </p>
     ),
-    writeup: (
-      <a
-        href="https://notion.so/inquiryon"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline hover:opacity-80"
-      >
-        Read design notes →
-      </a>
+    previewSections: [
+      {
+        title: "Write-up",
+        icon: <FaPencil />,
+        content: (
+          <a
+            href="https://notion.so/concaly"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:opacity-80"
+          >
+            Read the full write-up →
+          </a>
+        ),
+      },
+      {
+        title: "Role",
+        icon: "🛠️",
+        content: <p>Built it myself</p>,
+      },
+      {
+        title: "Stack",
+        icon: "⚙️",
+        content: <p>Supabase Something</p>,
+      },
+    ],
+    screenshots: [
+      { src: "/images/inquiryon-hero.png", alt: "Hero section" },
+      { src: "/images/inquiryon-section.png", alt: "Detail view" },
+    ],
+  },
+  jonadrew: {
+    what: (
+      <p>
+        Inquiryon is a landing page for a concept brand focused on research
+        tools and ambient data visualization.
+      </p>
     ),
-    role: <p>Built it myself</p>,
-    stack: <p>Supabase Somtehing</p>,
+    why: (
+      <p>
+        This was an exercise in design identity and motion — crafting a
+        high-fidelity, expressive landing page that plays with grid and type.
+      </p>
+    ),
+    previewSections: [
+      {
+        title: "Write-up",
+        icon: <FaPencil />,
+        content: (
+          <a
+            href="https://notion.so/concaly"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:opacity-80"
+          >
+            Read the full write-up →
+          </a>
+        ),
+      },
+      {
+        title: "Role",
+        icon: "🛠️",
+        content: <p>Built it myself</p>,
+      },
+      {
+        title: "Stack",
+        icon: "⚙️",
+        content: <p>Supabase Something</p>,
+      },
+    ],
     screenshots: [
       { src: "/images/inquiryon-hero.png", alt: "Hero section" },
       { src: "/images/inquiryon-section.png", alt: "Detail view" },

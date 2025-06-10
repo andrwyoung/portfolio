@@ -1,10 +1,10 @@
-export type ProjectType = "concaly" | "mudboard" | "inquiryon";
+export type ProjectType = "concaly" | "mudboard" | "pct" | "jonadrew";
 export const projectStyles: Record<
   string,
   {
     header: string;
-    link: string;
-    logo_src: string;
+    link?: string;
+    logo_src?: string;
     fonts: {
       logo: string;
       header: string;
@@ -29,6 +29,7 @@ export const projectStyles: Record<
       hover: string;
       selected: string;
       border: string;
+      icon: string;
     };
   }
 > = {
@@ -60,6 +61,7 @@ export const projectStyles: Record<
       hover: "hover:text-concaly-secondary",
       selected: "bg-concaly-secondary-lightest border-concaly-secondary",
       border: "border-concaly-secondary",
+      icon: "text-concaly-secondary",
     },
   },
   mudboard: {
@@ -91,36 +93,65 @@ export const projectStyles: Record<
       hover: "hover:text-mudboard-accent",
       selected: "bg-mudboard-accent",
       border: "border-mudboard-accent",
+      icon: "text-mudboard-accent",
     },
   },
-  inquiryon: {
-    header: "Inquiryon",
-    link: "https://www.inquiryon.com/",
-    logo_src: "/inquiryon-logo.png",
+  pct: {
+    header: "Pacific Crest Trail",
     fonts: {
-      logo: "font-inquiryon-logo",
-      header: "font-inquiryon-header",
-      body: "font-inquiryon-body",
+      logo: "font-pct-logo",
+      header: "font-pct-header",
+      body: "font-pct-body",
     },
     fontNames: {
-      logo: "Rajdhani",
-      header: "Chivo",
-      body: "Mulish",
+      logo: "Kaushan",
+      header: "Barlow",
+      body: "Crimson",
     },
     fontSizes: {
-      logo: "text-[1.05rem]",
-      header: "text-[1rem] font-medium",
-      body: "text-[1.00rem] font-medium",
+      logo: "text-[1.04rem]",
+      header: "text-[.96rem] font-semibold",
+      body: "text-[1.08rem] font-medium",
     },
     colors: {
-      primary: "bg-inquiryon-primary",
-      accent: "bg-inquiryon-accent",
-      secondary: "bg-inquiryon-secondary",
-      text: "text-inquiryon-primary-foreground",
-      background: "bg-inquiryon-primary",
-      hover: "hover:text-inquiryon-accent",
-      selected: "bg-inquiryon-accent border-inquiryon-accent",
-      border: "border-inquiryon-accent",
+      primary: "bg-pct-primary",
+      accent: "bg-pct-accent",
+      secondary: "bg-pct-secondary",
+      text: "text-pct-text",
+      background: "bg-pct-primary",
+      hover: "hover:text-pct-accent",
+      selected: "bg-pct-accent",
+      border: "border-pct-accent",
+      icon: "text-pct-accent",
+    },
+  },
+  jonadrew: {
+    header: "Jonadrew",
+    fonts: {
+      logo: "font-jonadrew-logo",
+      header: "font-jonadrew-header",
+      body: "font-jonadrew-body",
+    },
+    fontNames: {
+      logo: "Caveat",
+      header: "Quicksand",
+      body: "Maven",
+    },
+    fontSizes: {
+      logo: "text-[1.1rem]",
+      header: "text-[.94rem] font-semibold",
+      body: "text-[.99rem] font-medium",
+    },
+    colors: {
+      primary: "bg-jonadrew-primary",
+      accent: "bg-jonadrew-accent",
+      secondary: "bg-jonadrew-secondary",
+      text: "text-jonadrew-text",
+      background: "bg-jonadrew-primary",
+      hover: "hover:text-jonadrew-accent",
+      selected: "bg-jonadrew-accent",
+      border: "border-jonadrew-accent",
+      icon: "text-jonadrew-secondary",
     },
   },
 };

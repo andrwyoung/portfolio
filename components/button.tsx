@@ -20,6 +20,8 @@ const buttonVariants = cva(
           "text-sm px-3 py-1  text-concaly-primary-text font-semibold bg-concaly-secondary-lightest rounded-lg outline-2 outline-concaly-secondary hover:bg-concaly-secondary",
         inquiryon:
           "text-sm px-4 py-1 font-medium text-inquiryon-primary bg-inquiryon-accent hover:bg-inquiryon-accent hover:text-inquiryon-accent-foreground ",
+        pct: "",
+        jonadrew: "",
       },
     },
     defaultVariants: {

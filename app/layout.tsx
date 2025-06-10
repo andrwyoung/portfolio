@@ -10,6 +10,12 @@ import {
   Recursive,
   Gantari,
   Overpass_Mono,
+  Kaushan_Script,
+  Exo_2,
+  Crimson_Pro,
+  Caveat_Brush,
+  Quicksand,
+  Maven_Pro,
 } from "next/font/google";
 import "./globals.css";
 
@@ -85,6 +91,46 @@ const monoFont = Overpass_Mono({
   subsets: ["latin"],
 });
 
+// PROJECT: PCT
+
+const pctLogo = Kaushan_Script({
+  variable: "--font-pct-logo",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const pctHeader = Exo_2({
+  variable: "--font-pct-header",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
+const pctBody = Crimson_Pro({
+  variable: "--font-pct-body",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
+// PROJECT: Jonadrew
+
+const jonadrewLogo = Caveat_Brush({
+  variable: "--font-jonadrew-logo",
+  subsets: ["latin"],
+  weight: "400", // Caveat doesn't need multiple weights usually
+});
+
+const jonadrewHeader = Quicksand({
+  variable: "--font-jonadrew-header",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"], // pick based on what you use
+});
+
+const jonadrewBody = Maven_Pro({
+  variable: "--font-jonadrew-body",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -104,6 +150,12 @@ export default function RootLayout({
         ${headerFont.variable}
         ${bodyFont.variable}
         ${monoFont.variable}
+        ${pctLogo.variable}
+        ${pctHeader.variable}
+        ${pctBody.variable}
+        ${jonadrewLogo.variable}
+        ${jonadrewHeader.variable}
+        ${jonadrewBody.variable}
         antialiased
       `}
       >
