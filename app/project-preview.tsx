@@ -4,6 +4,7 @@ import { projectStyles, ProjectType } from "@/types/project-styles";
 import { Button } from "@/components/button";
 import Image from "next/image";
 import { projectContent } from "@/types/project-writeup";
+import { FaLink } from "react-icons/fa6";
 
 export function ProjectPreview({ active }: { active: ProjectType }) {
   const style = projectStyles[active];
@@ -18,7 +19,7 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
     {
       title: "How did I grow?",
       content: content.why,
-      className: "text-xl",
+      className: "text-2xl",
     },
   ];
 
@@ -27,22 +28,20 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
   return (
     <motion.div
       className={`w-full h-full py-8 px-12 ${style.colors.background} ${style.colors.text} ${style.fonts.body} overflow-y-auto 
-      scrollbar-thin scrollbar-track-transparent`}
+      scrollbar-thin scrollbar-track-transparent relative`}
     >
       {/* <h2 className={`text-3xl mb-4 ${style.fonts.header}`}>{style.header}</h2> */}
-      <div className="flex justify-between">
-        <div className={`text-4xl mb-4 ${style.fonts.logo}`}>
-          {style.header}
-        </div>
-        {style.logo_src && (
+      <div className="flex gap-8 items-center mb-4 ">
+        {/* {style.logo_src && (
           <Image
             src={style.logo_src}
             alt={`${style.header} Logo`}
             width={512}
             height={512}
-            className="w-[32px] h-[32px]"
+            className="w-[24px] h-[24px]"
           />
-        )}
+        )} */}
+        <div className={`text-4xl ${style.fonts.logo}`}>{style.header}</div>
       </div>
 
       <div className=" mb-12">
@@ -91,10 +90,23 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
 
         {content.screenshots && content.screenshots.length > 0 && (
           <section>
-            <h2 className={`text-xl mb-1 font-semibold ${style.fonts.header}`}>
-              Screenshots
+            <h2
+              className={`flex items-center gap-2 text-xl mb-4 font-semibold ${style.fonts.header}`}
+            >
+              <span>Photos</span>
+              {style.photos_link && (
+                <a
+                  href={style.photos_link}
+                  title={`More ${style.header} Pictures`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline hover:opacity-80 ${style.colors.icon}`}
+                >
+                  <FaLink />
+                </a>
+              )}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {content.screenshots.map((shot, i) => (
                 <img
                   key={i}

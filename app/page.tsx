@@ -40,7 +40,11 @@ export default function Home() {
         {/* Name + Links */}
         <h1
           className={`text-5xl ${activeFontHeader} mb-2 transition-all duration-200
-          select-none ${active ? `cursor-pointer ${activeHoverColor}` : ""} ${
+          select-none ${
+            active
+              ? `cursor-pointer text-right ${activeHoverColor}`
+              : "text-center"
+          } ${
             active === "concaly" || active === "jonadrew" ? "font-medium" : ""
           }`}
           onClick={() => setActive(null)}

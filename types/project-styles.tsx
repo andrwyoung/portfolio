@@ -4,6 +4,7 @@ export const projectStyles: Record<
   {
     header: string;
     link?: string;
+    photos_link?: string;
     logo_src?: string;
     fonts: {
       logo: string;
@@ -98,6 +99,8 @@ export const projectStyles: Record<
   },
   pct: {
     header: "Pacific Crest Trail",
+    photos_link:
+      "https://www.flickr.com/photos/198687848@N05/albums/72177720320026879",
     fonts: {
       logo: "font-pct-logo",
       header: "font-pct-header",
@@ -115,13 +118,13 @@ export const projectStyles: Record<
     },
     colors: {
       primary: "bg-pct-primary",
-      accent: "bg-pct-accent",
-      secondary: "bg-pct-secondary",
+      accent: "bg-pct-secondary",
+      secondary: "bg-pct-accent",
       text: "text-pct-text",
       background: "bg-pct-primary",
       hover: "hover:text-pct-accent",
-      selected: "bg-pct-accent",
-      border: "border-pct-accent",
+      selected: "bg-pct-secondary",
+      border: "border-pct-secondary",
       icon: "text-pct-accent",
     },
   },
