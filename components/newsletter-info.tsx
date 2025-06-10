@@ -16,7 +16,8 @@ export default function NewsletterInfo() {
         >
           <p className="mb-1">
             <strong>Every other Wednesday</strong> I share what I&apos;ve been
-            building, creating or thinking about. Come join us!
+            building, creating or thinking about with a few hundred readers.
+            Come join us!
           </p>
           <p className="mb-1">
             You can check out{" "}

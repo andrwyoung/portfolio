@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { DesignSpec } from "../components/design-spec";
 import { projectStyles, ProjectType } from "@/types/project-styles";
 import { Button } from "@/components/button";
-import Image from "next/image";
 import { projectContent } from "@/types/project-writeup";
 import { FaLink } from "react-icons/fa6";
 
@@ -93,7 +92,7 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
             <h2
               className={`flex items-center gap-2 text-xl mb-4 font-semibold ${style.fonts.header}`}
             >
-              <span>Photos</span>
+              <span>Images</span>
               {style.photos_link && (
                 <a
                   href={style.photos_link}
@@ -106,13 +105,17 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
                 </a>
               )}
             </h2>
-            <div className="grid grid-cols-1 gap-4">
+            <div
+              className={`columns-1 md:columns-2  ${
+                content.isLandscapes ? " " : "xl:columns-3"
+              }  gap-4 space-y-4`}
+            >
               {content.screenshots.map((shot, i) => (
                 <img
                   key={i}
                   src={shot.src}
                   alt={shot.alt}
-                  className="rounded-lg shadow sm:col-span-1"
+                  className="mb-4 rounded-lg shadow w-full"
                 />
               ))}
             </div>

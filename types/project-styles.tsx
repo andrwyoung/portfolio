@@ -130,6 +130,7 @@ export const projectStyles: Record<
   },
   jonadrew: {
     header: "Jonadrew",
+    link: "https://www.jonadrew.com/",
     fonts: {
       logo: "font-jonadrew-logo",
       header: "font-jonadrew-header",

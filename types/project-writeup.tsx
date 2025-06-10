@@ -17,6 +17,7 @@ export const projectContent: Record<
       icon?: React.ReactNode;
       content: React.ReactNode;
     }[];
+    isLandscapes?: boolean;
     screenshots?: { src: string; alt: string }[];
   }
 > = {
@@ -172,16 +173,6 @@ export const projectContent: Record<
               links={["https://medium.com/@andrwyoung/p-7544392c4daf"]}
               accentClass="text-pct-accent"
             />
-            {/* <div className="mt-4" />
-            <InlineLinkListItem
-              label="Photos"
-              links={[
-                "https://www.flickr.com/photos/198687848@N05/albums/72177720319936619",
-                "https://www.flickr.com/photos/198687848@N05/albums/72177720320026879",
-                "https://www.flickr.com/photos/198687848@N05/albums/72177720320017892",
-              ]}
-              accentClass="text-pct-accent"
-            /> */}
           </ul>
         ),
       },
@@ -227,6 +218,7 @@ export const projectContent: Record<
         ),
       },
     ],
+    isLandscapes: true,
     screenshots: [
       { src: "/pct/1.webp", alt: "Washington" },
       { src: "/pct/2.webp", alt: "California. Silver Lake" },
@@ -236,19 +228,28 @@ export const projectContent: Record<
       { src: "/pct/8.webp", alt: "Sierras" },
       { src: "/pct/6.webp", alt: "Sierras" },
       { src: "/pct/7.webp", alt: "Oregon" },
+      { src: "/pct/IMG_5756.webp", alt: "Oregon" },
+      { src: "/pct/IMG_5803.webp", alt: "Oregon" },
+      { src: "/pct/IMG_5933.webp", alt: "Oregon" },
+      { src: "/pct/9.webp", alt: "Washington. Mount Rainer" },
     ],
   },
   jonadrew: {
     what: (
       <p>
-        Inquiryon is a landing page for a concept brand focused on research
-        tools and ambient data visualization.
+        In 2023, I left my job to pursue illustration full time — a return to
+        the creative thread that started it all. Jonadrew is a digital home for
+        that work: a personal brand, a playground, and a slow unfolding of what
+        it means to make art seriously.
       </p>
     ),
     why: (
       <p>
-        This was an exercise in design identity and motion — crafting a
-        high-fidelity, expressive landing page that plays with grid and type.
+        I learned to value slow progress. Drawing doesn’t reward speed — it
+        rewards attention, iteration, and showing up when things aren’t working.
+        I also had to decouple identity from output. Some days, nothing looked
+        right. Some weeks, nothing shipped. But I kept going — not to prove
+        anything, just to keep learning.
       </p>
     ),
     previewSections: [
@@ -278,8 +279,54 @@ export const projectContent: Record<
       },
     ],
     screenshots: [
-      { src: "/images/inquiryon-hero.png", alt: "Hero section" },
-      { src: "/images/inquiryon-section.png", alt: "Detail view" },
+      { src: "/jonadrew/4-26c.webp", alt: "Close-up portrait with brown eyes" },
+      { src: "/jonadrew/9-25.webp", alt: "Still life of a cracked open egg" },
+      { src: "/jonadrew/9-26.webp", alt: "Glass of water study with shadow" },
+      {
+        src: "/jonadrew/9-26b.webp",
+        alt: "Tangerine segments in warm lighting",
+      },
+      {
+        src: "/jonadrew/9-26c.webp",
+        alt: "Lemon slices on fabric in soft lighting",
+      },
+
+      {
+        src: "/jonadrew/9-26f.webp",
+        alt: "Still life of cracked egg with shell fragments",
+      },
+      {
+        src: "/jonadrew/9-26g.webp",
+        alt: "Egg yolk balanced between chopsticks",
+      },
+      {
+        src: "/jonadrew/4-26b.webp",
+        alt: "Portrait of woman in bandana looking upward",
+      },
+      {
+        src: "/jonadrew/9-26h.webp",
+        alt: "Spoon of honey dripping into a jar",
+      },
+      {
+        src: "/jonadrew/9-27b copy.webp",
+        alt: "Digital rendering of a faceted crystal gem",
+      },
+      {
+        src: "/jonadrew/10-2 try 2.webp",
+        alt: "Portrait of a bird with strong lighting",
+      },
+      {
+        src: "/jonadrew/4-26.webp",
+        alt: "Portrait of a girl with a neutral expression",
+      },
+      {
+        src: "/jonadrew/10-2.webp",
+        alt: "Digital rendering if toast!",
+      },
+      {
+        src: "/jonadrew/9-26e.webp",
+        alt: "Digital rendering of side profile of a hawk",
+      },
     ],
   },
 };
