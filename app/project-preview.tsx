@@ -92,6 +92,29 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
           ))}
         </section>
 
+        <div className="mt-4 mb-8 text-sm text-muted max-w-xl flex items-center gap-1">
+          Like this? I share more every other Wednesday —
+          <button
+            type="button"
+            title="Focus on Newsletter Signup Input"
+            onClick={() => {
+              const input = document.getElementById("newsletter-input");
+              if (input) {
+                input.focus();
+                input.scrollIntoView({ behavior: "smooth", block: "center" });
+              }
+            }}
+            className={`cursor-pointer  transition-all
+              duration-200  ${
+                active === "concaly"
+                  ? "text-concaly-secondary-darker"
+                  : style.colors.icon
+              } font-medium`}
+          >
+            sign up on the left
+          </button>
+        </div>
+
         {content.screenshots && content.screenshots.length > 0 && (
           <section>
             <h2

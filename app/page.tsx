@@ -62,7 +62,7 @@ export default function Home() {
           ${active === "pct" ? "text-md leading-tight" : "text-sm"}`}
         >
           I&apos;ve coded + designed products, and walked across the country.
-          There&apos;s more ahead, so come along for the ride:
+          Come along for the journey to see what&apos;s next:
         </p>
 
         <div className="flex gap-2 items-center mb-10">
@@ -74,7 +74,7 @@ export default function Home() {
         <p
           className={`text-xs mb-2 font-semibold ${active ? "" : "underline"}`}
         >
-          Choose a Chapter:
+          Open a Chapter:
         </p>
         <div
           className={`flex flex-col gap-2 mb-12 -translate-x-[1px] ${

@@ -183,12 +183,16 @@ export const projectContent: Record<
     why: (
       <>
         <p>
-          This project is really stretching me. Not simply technically or
-          designwise, but with everything that comes with building a business:
-          copywriting, business strategy, positioning, outreach, scalabity.
+          This project is really{" "}
+          <span className="font-semibold">stretching me</span>. Not simply
+          technically or designwise, but with everything that comes with
+          building a business: copywriting, business strategy, positioning,
+          outreach, scalabity.
         </p>
         <p className="mt-4">
-          I think I have a good shot, and I'm excited to share where this leads!
+          I think I have a good shot, and I'm{" "}
+          <span className="font-semibold">excited to share</span> where this
+          leads!
         </p>
       </>
     ),

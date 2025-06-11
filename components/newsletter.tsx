@@ -85,15 +85,15 @@ export function NewsletterForm() {
         focus-within:ring-2 rounded-md focus-within:ring-stone-300 border-2 border-stone-600"
         >
           <input
+            id="newsletter-input"
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
               setStatus("idle");
             }}
-            placeholder="Your Email"
+            placeholder="Sign up for the newsletter"
             className={` py-1.5 px-3 text-xs rounded-l-md 
-            focus:outline-none     transition-all duration-200
-          `}
+            focus:outline-none transition-all duration-200 placeholder:text-stone-500`}
           />
           <button
             type="submit"
