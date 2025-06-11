@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import {
   Kumbh_Sans,
   Figtree,
@@ -160,6 +161,7 @@ export default function RootLayout({
       `}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

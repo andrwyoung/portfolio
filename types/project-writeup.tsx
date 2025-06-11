@@ -38,41 +38,98 @@ export const projectContent: Record<
         Concaly is a convention planning tool for artists and vendors. It
         aggregates data for 2,000+ cons and helps users visualize deadlines,
         travel, and booth schedules on a responsive map and calendar. It was
-        significant for me personally because it marked a return to coding —
-        armed with all the skills from my illustration background.
+        significant for me personally because it marked a return to coding — as
+        well as a <strong>fast track</strong> to front end dev and UI/UX design.
       </p>
     ),
     why: (
-      <p>
-        Most con tracking tools are outdated, hard to navigate, or exist in
-        spreadsheets. I built Concaly to offer a modern, centralized tool that
-        scales with the growing con circuit and artist community needs.
-      </p>
+      <>
+        <p>
+          Most con tracking tools are outdated, hard to navigate, or exist in
+          spreadsheets. I built Concaly to offer a modern, centralized tool that
+          scales with the growing con circuit and artist community needs.
+        </p>
+        <p>
+          I was proud of what Concaly became — and artists were genuinely
+          interested. But I realized the core problem I wanted to solve
+          long-term wasn’t scheduling, it was creative collaboration. I paused
+          development to focus on Mudboard, where I saw more impact and clearer
+          paths to sustainability.
+        </p>
+      </>
     ),
     previewSections: [
       {
         title: "Other Links",
         icon: <FaEdit />,
         content: (
-          <a
-            href="https://notion.so/concaly"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:opacity-80"
-          >
-            Read the full write-up →
-          </a>
+          <ul className="space-y-0.5">
+            <InlineLinkListItem
+              label="Learnings"
+              links={[
+                "https://jondrew.notion.site/ConCaly-Writeup-1e72e809fa4e80f7b714c8f6cf848809?source=copy_link",
+              ]}
+              accentClass="text-concaly-secondary-darker"
+            />
+            <InlineLinkListItem
+              label="Loom Video Demo"
+              links={[
+                "https://www.loom.com/share/8f9b7fa2c2c346adac5720249d4fb79a?sid=318c6f84-30f1-49ea-ada9-9327cac99ee4",
+              ]}
+              accentClass="text-concaly-secondary-darker"
+            />
+            <InlineLinkListItem
+              label="Github"
+              links={["https://github.com/andrwyoung/con-app"]}
+              accentClass="text-concaly-secondary-darker"
+            />
+            <InlineLinkListItem
+              label="Figma (Original Design)"
+              links={[
+                "https://www.figma.com/design/M9GYa5tcarEDOCRDmONnZz/Convention-Searcher?node-id=0-1&t=TnlcqTw0QVP75NLy-1",
+              ]}
+              accentClass="text-concaly-secondary-darker"
+            />
+          </ul>
         ),
       },
       {
-        title: "Role",
+        title: "Scope",
         icon: <FaMapMarkerAlt />,
-        content: <p>Built it myself</p>,
+        content: (
+          <ul className="space-y-0.5">
+            <li>- Solo full-stack build</li>
+            <li>- Custom CMS and admin panel</li>
+            <li>- Sourced 3,000+ cons</li>
+            <li>- Strong early interest from art community</li>
+            <li>- Paused to focus on Mudboard</li>
+          </ul>
+        ),
       },
       {
         title: "Stack",
         icon: <FaCalendarDay />,
-        content: <p>Supabase Something</p>,
+        content: (
+          <ul className="space-y-0.5">
+            <li>
+              - Map: <span className="font-semibold">Mapbox</span>
+            </li>
+            <li>
+              - Data Gathering: <span className="font-semibold">Python</span>
+            </li>
+            <li>
+              - Database and Auth:{" "}
+              <span className="font-semibold">Supabase</span>
+            </li>
+            <li>
+              - Frontend + Backend:{" "}
+              <span className="font-semibold">Next.js</span>
+            </li>
+            <li>
+              - Hosting: <span className="font-semibold">Vercel</span>
+            </li>
+          </ul>
+        ),
       },
     ],
     screenshots: [
@@ -100,28 +157,59 @@ export const projectContent: Record<
     ),
     previewSections: [
       {
-        title: "Write-up",
+        title: "Extra Links",
         icon: <FaPaintBrush />,
         content: (
-          <a
-            href="https://notion.so/concaly"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:opacity-80"
-          >
-            Read the full write-up →
-          </a>
+          <ul className="space-y-0.5">
+            <InlineLinkListItem
+              label="Decision Making"
+              links={[
+                "https://jondrew.notion.site/Mudboard-Writeup-1ff2e809fa4e80edb3d0cda40d499e4f?source=copy_link",
+              ]}
+              accentClass="text-mudboard-accent"
+            />
+            <InlineLinkListItem
+              label="Interest Form"
+              links={["https://www.mudboard.com/get-involved"]}
+              accentClass="text-mudboard-accent"
+            />
+          </ul>
         ),
       },
       {
-        title: "Role",
+        title: "Progress",
         icon: <FaLeaf />,
-        content: <p>Built it myself</p>,
+        content: (
+          <ul className="space-y-0.5">
+            <li>- MVP built and launched</li>
+            <li>- Iterated through multiple testing rounds</li>
+            <li>- Strong early response</li>
+            <li>- Steady unprompted usage</li>
+            <li>- Moving into monetization</li>
+          </ul>
+        ),
       },
       {
         title: "Stack",
         icon: <FaImages />,
-        content: <p>Supabase Something</p>,
+        content: (
+          <ul className="space-y-0.5">
+            <li>
+              - Drag and Drop: <span className="font-semibold">Dnd Kit</span>
+            </li>
+            <li>
+              - Database and Auth:{" "}
+              <span className="font-semibold">Supabase</span>
+            </li>
+            <li>
+              - Frontend + Backend:{" "}
+              <span className="font-semibold">Next.js</span>
+            </li>
+            <li>
+              - Hosting: <span className="font-semibold">Vercel</span>
+            </li>
+          </ul>
+        ),
       },
     ],
     screenshots: [
@@ -192,7 +280,7 @@ export const projectContent: Record<
         title: "Gear",
         icon: <FaCloudShowersWater />,
         content: (
-          <ul className="space-y-1">
+          <ul className="space-y-0.5">
             <InlineLinkListItem
               label="How I sewed my gear"
               links={[
@@ -214,7 +302,7 @@ export const projectContent: Record<
         title: "Reflections",
         icon: <FaMountainSun />,
         content: (
-          <ul className="space-y-1">
+          <ul className="space-y-0.5">
             <InlineLinkListItem
               label="Daily Hiker Log"
               links={[
@@ -291,7 +379,7 @@ export const projectContent: Record<
         title: "Drawings Stats",
         icon: <FaPencil />,
         content: (
-          <ul className="">
+          <ul className="space-y-0.5">
             <li>- Drawing reps: over 8,000</li>
             <li>- Comissions: ~50 clients</li>
             <li>
@@ -304,7 +392,7 @@ export const projectContent: Record<
         title: "Works Published",
         icon: <FaBook />,
         content: (
-          <ul className="">
+          <ul className="space-y-0.5">
             <InlineLinkListItem
               label="Book cover set"
               links={[
@@ -329,7 +417,7 @@ export const projectContent: Record<
         title: "Tools",
         icon: <FaPaintRoller />,
         content: (
-          <ul className="">
+          <ul className="space-y-0.5">
             <li className="flex flex-col w-fit">
               - Clip Studio Paint Ex
               <span className="text-xs px-4 text-neutral-500">

@@ -12,7 +12,7 @@ export default function NewsletterInfo() {
           side="top"
           sideOffset={4}
           className={`z-50 rounded-lg bg-primary p-3 shadow-md text-sm text-stone-800 
-                  font-body  w-64`}
+                  font-body w-64 focus-visible:outline-none`}
         >
           <p className="mb-1">
             <strong>Every other Wednesday</strong> I share what I&apos;ve been

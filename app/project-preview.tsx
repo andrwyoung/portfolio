@@ -74,7 +74,7 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
           ))}
         </div>
 
-        <section className="grid gap-2 sm:grid-cols-3 mb-16">
+        <section className="grid gap-y-12 lg:gap-y-2  gap-x-4 grid-cols-1 lg:grid-cols-3 mb-16">
           {content.previewSections.map(({ title, icon, content }) => (
             <div key={title}>
               <h3
