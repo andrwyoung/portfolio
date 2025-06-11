@@ -92,27 +92,28 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
           ))}
         </section>
 
-        <div className="mt-4 mb-8 text-sm text-muted max-w-xl flex items-center gap-1">
-          Like this? I share more every other Wednesday —
-          <button
-            type="button"
-            title="Focus on Newsletter Signup Input"
-            onClick={() => {
-              const input = document.getElementById("newsletter-input");
-              if (input) {
-                input.focus();
-                input.scrollIntoView({ behavior: "smooth", block: "center" });
-              }
-            }}
-            className={`cursor-pointer  transition-all
-              duration-200  ${
+        <div className="mt-4 mb-8 text-sm text-muted max-w-xl">
+          <p className="flex flex-wrap items-center gap-1">
+            Like this? I share more every other Wednesday —
+            <span className="inline md:hidden">sign up on the homepage</span>
+            <button
+              type="button"
+              title="Focus on Newsletter Signup Input"
+              onClick={() => {
+                const input = document.getElementById("newsletter-input");
+                if (input) {
+                  input.focus();
+                }
+              }}
+              className={`cursor-pointer hidden md:inline transition-all duration-200 ${
                 active === "concaly"
                   ? "text-concaly-secondary-darker"
                   : style.colors.icon
               } font-medium`}
-          >
-            sign up on the left
-          </button>
+            >
+              or on the left
+            </button>
+          </p>
         </div>
 
         {content.screenshots && content.screenshots.length > 0 && (
@@ -160,7 +161,9 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
         )}
       </div>
 
-      <DesignSpec activeProject={active} />
+      <div className="hidden md:block">
+        <DesignSpec activeProject={active} />
+      </div>
     </motion.div>
   );
 }

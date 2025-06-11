@@ -81,7 +81,7 @@ export function NewsletterForm() {
       <div className="flex items-center gap-2">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col md:flex-row max-w-sm transition-all duration-200
+          className="flex flex-row max-w-sm transition-all duration-200
         focus-within:ring-2 rounded-md focus-within:ring-stone-300 border-2 border-stone-600"
         >
           <input

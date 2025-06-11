@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ProjectPreview } from "./project-preview";
 import { projectStyles, ProjectType } from "@/types/project-styles";
-import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaXmark } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { AnimatePresence, motion } from "framer-motion";
 import { SocialIcon } from "@/components/social-icon";
@@ -29,13 +29,17 @@ export default function Home() {
   //   : "";
 
   return (
-    <div className="w-screen h-screen flex flex-col md:flex-row  text-stone-700">
+    <div className="w-screen h-screen flex flex-row  text-stone-700">
       {/* Left side: static nav */}
       <div
         className={`
-      flex flex-col items-center justify-center p-8
-      ${active ? "w-3/8 items-end justify-between" : "w-full"}
-    `}
+          flex-col items-center justify-center p-8
+          ${
+            active
+              ? "hidden md:flex w-3/8 items-end justify-between"
+              : "flex  w-full"
+          }
+          `}
       >
         {/* Name + Links */}
         <h1
@@ -158,7 +162,18 @@ export default function Home() {
       {/* Right side: dynamic project preview */}
       <AnimatePresence mode="wait">
         {active && (
-          <motion.div key={active} className={`w-5/8`}>
+          <motion.div key={active} className={`w-full md:w-5/8`}>
+            {/* Close button for mobile */}
+            <button
+              className="fixed top-4 right-4 md:hidden z-100 
+              bg-white/40 cursor-pointer p-1 rounded-lg
+              text-neutral-800/80 hover:text-neutral-700"
+              onClick={() => setActive(null)}
+              aria-label="Close preview"
+            >
+              <FaXmark className="size-5" />
+            </button>
+
             <ProjectPreview active={active} />
           </motion.div>
         )}

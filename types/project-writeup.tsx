@@ -174,8 +174,8 @@ export const projectContent: Record<
         <span className="font-semibold">Mudboard</span> is what I'm currently
         working on. It's a{" "}
         <span className="font-semibold">workspace + marketplace</span> for
-        collecting and organizing visual references with intuitive drag and
-        drop, sharable sections and artist-targeted tools. But also a space to{" "}
+        collecting and organizing images with drag and drop, sharable sections
+        and artist tools. But also a space to{" "}
         <span className="font-semibold">remix, explore and share</span> curated
         galleries with others.
       </p>
@@ -190,9 +190,9 @@ export const projectContent: Record<
           outreach, scalabity.
         </p>
         <p className="mt-4">
-          I think I have a good shot, and I'm{" "}
-          <span className="font-semibold">excited to share</span> where this
-          leads!
+          I'm still getting started though, so I'm{" "}
+          <span className="font-semibold">excited to share</span> more about the
+          journey in the newsletter!
         </p>
       </>
     ),
