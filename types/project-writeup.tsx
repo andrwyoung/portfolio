@@ -35,39 +35,51 @@ export const projectContent: Record<
   concaly: {
     what: (
       <p>
-        Concaly is a convention planning tool for artists and vendors. It
-        aggregates data for 2,000+ cons and helps users visualize deadlines,
-        travel, and booth schedules on a responsive map and calendar. It was
-        significant for me personally because it marked a return to coding — as
-        well as a <strong>fast track</strong> to front end dev and UI/UX design.
+        Concaly is a <strong>convention planning tool</strong> for artists to
+        find conventions and organize deadlines. It has filtering, search, a
+        custom built CMS + admin panel, calendar, and map. I designed and built
+        the app in 5 weeks — a month after picking up React.
       </p>
     ),
     why: (
       <>
         <p>
-          Most con tracking tools are outdated, hard to navigate, or exist in
-          spreadsheets. I built Concaly to offer a modern, centralized tool that
-          scales with the growing con circuit and artist community needs.
+          Building ConCaly marked my return to coding, and a fast track into
+          frontend dev and UI/UX. I had to <strong>learn a lot</strong> quickly
+          (and boy did I learn), but the tools felt light and familiar.
         </p>
-        <p>
-          I was proud of what Concaly became — and artists were genuinely
-          interested. But I realized the core problem I wanted to solve
-          long-term wasn’t scheduling, it was creative collaboration. I paused
-          development to focus on Mudboard, where I saw more impact and clearer
-          paths to sustainability.
+
+        <p className="mt-4">
+          Yet, as much as I learned from building, the hardest part of this
+          project was actually <strong>letting go</strong>. I had early traction
+          — people were interested, helping, and giving feedback.
+        </p>
+        <p className="mt-4">
+          But just as things picked up, I saw how much more potential{" "}
+          <strong>Mudboard</strong> had. I had to make the call to give up
+          something good to <strong>pursue something great</strong>. It wasn't
+          easy, but it taught me about prioritization, sacrifice, and
+          acknowledging my limits.
         </p>
       </>
     ),
     previewSections: [
       {
         title: "Other Links",
-        icon: <FaEdit />,
+        icon: <FaEdit className="size-5" />,
         content: (
           <ul className="space-y-0.5">
             <InlineLinkListItem
-              label="Learnings"
+              label="Learnings Write-up"
               links={[
                 "https://jondrew.notion.site/ConCaly-Writeup-1e72e809fa4e80f7b714c8f6cf848809?source=copy_link",
+              ]}
+              accentClass="text-concaly-secondary-darker"
+            />
+            <InlineLinkListItem
+              label="DevLog"
+              links={[
+                "https://jondrew.notion.site/1d12e809fa4e80f8a0c0eead1477afd8?v=1d12e809fa4e8060996d000c68b22fb2&source=copy_link",
               ]}
               accentClass="text-concaly-secondary-darker"
             />
@@ -94,21 +106,35 @@ export const projectContent: Record<
         ),
       },
       {
-        title: "Scope",
-        icon: <FaMapMarkerAlt />,
+        title: "Timeline",
+        icon: <FaCalendarDay />,
         content: (
           <ul className="space-y-0.5">
-            <li>- Solo full-stack build</li>
-            <li>- Custom CMS and admin panel</li>
-            <li>- Sourced 3,000+ cons</li>
-            <li>- Strong early interest from art community</li>
-            <li>- Paused to focus on Mudboard</li>
+            <li>
+              - <span className="font-semibold">W1:</span> Roadmap, Auth, Schema
+            </li>
+            <li>
+              - <span className="font-semibold">W2:</span> Mapbox, Search
+            </li>
+            <li>
+              - <span className="font-semibold">W3:</span> Filtering, UI polish
+            </li>
+            <li>
+              - <span className="font-semibold">W4:</span> Calendar + List logic
+            </li>
+            <li>
+              - <span className="font-semibold">W5:</span> Mobile, CMS, Writeups
+            </li>
+            <li>
+              - <span className="font-semibold">W6-9:</span> Feedback loops.
+              Pivoted.
+            </li>
           </ul>
         ),
       },
       {
         title: "Stack",
-        icon: <FaCalendarDay />,
+        icon: <FaMapMarkerAlt />,
         content: (
           <ul className="space-y-0.5">
             <li>
@@ -145,15 +171,31 @@ export const projectContent: Record<
   mudboard: {
     what: (
       <p>
-        Mudboard is a collaborative moodboarding tool for digital creators.
-        Inspired by traditional collage but built for async creativity.
+        In 2024, I started building <strong>Mudboard</strong> — a moodboarding
+        tool for artists who think in images, not files. I wanted something that
+        felt fast, tactile, and fluid. A space where I could drag in references,
+        sketch ideas, and rearrange everything until it made sense. Traditional
+        tools felt clunky or weren’t built for visual thinkers. So I made my
+        own.
       </p>
     ),
     why: (
-      <p>
-        I wanted to build a tool where artists could visually brainstorm in
-        shared boards — without the constraints of folders or grids.
-      </p>
+      <>
+        <p>
+          I built Mudboard because most moodboarding tools aren’t made for how
+          artists actually think. They're either rigid (grids, folders, pins) or
+          bloated with features meant for product teams. I wanted something that
+          felt fast, fluid, and spatial — a tool that gets out of the way so
+          artists can stay in flow.
+        </p>
+        <p className="mt-4">
+          But I also kept coming back to one missing piece: reuse. I didn’t just
+          want a canvas — I wanted to build a system. A way to save and remix
+          reference packs, share curated sections with others, and treat
+          moodboarding as an evolving creative language. That’s the vision for
+          Mudboard.
+        </p>
+      </>
     ),
     previewSections: [
       {
