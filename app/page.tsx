@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ProjectPreview } from "./project-preview";
 import { projectStyles, ProjectType } from "@/types/project-styles";
 import { FaGithub, FaLinkedin, FaXmark } from "react-icons/fa6";
@@ -24,9 +24,16 @@ export default function Home() {
     ? projectStyles[active]?.colors?.hover || ""
     : "hover:text-secondary";
 
-  // const activeSelectedColor = active
-  //   ? projectStyles[active]?.colors?.selected || ""
-  //   : "";
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setActive(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   return (
     <div className="w-screen h-screen flex flex-row  text-stone-700">
@@ -43,7 +50,7 @@ export default function Home() {
       >
         {/* Name + Links */}
         <h1
-          className={`text-5xl ${activeFontHeader} mb-2 transition-all duration-200
+          className={`text-4xl sm:text-4xl md:text-5xl ${activeFontHeader} mb-2 transition-all duration-200
           select-none ${
             active
               ? `cursor-pointer text-right ${activeHoverColor}`

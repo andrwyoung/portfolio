@@ -27,9 +27,9 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
 
   return (
     <motion.div
-      className={`w-full h-full py-8 px-12 ${style.colors.background} ${
-        style.colors.text
-      } ${style.fonts.body} ${
+      className={`w-full h-full py-8 px-6 sm:px-10 md:px-12 ${
+        style.colors.background
+      } ${style.colors.text} ${style.fonts.body} ${
         active === "pct" && "text-[1.0625rem] leading-normal"
       }  overflow-y-auto 
       scrollbar-thin scrollbar-track-transparent relative`}
@@ -111,7 +111,7 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
                   : style.colors.icon
               } font-medium`}
             >
-              or on the left
+              sign up on the left
             </button>
           </p>
         </div>
