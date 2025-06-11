@@ -3,13 +3,13 @@ import { useState } from "react";
 import { FaEnvelope } from "react-icons/fa6";
 import NewsletterInfo from "./newsletter-info";
 
-const NEWSLETTER_FORM_ID = "YOUR_FORM_ID";
-const CONVERTKIT_API_KEY = "YOUR_PUBLIC_API_KEY";
-
 function validateEmail(email: string): boolean {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return re.test(email.toLowerCase());
 }
+
+const COOLDOWN_KEY = "newsletter_signup_timestamp";
+const COOLDOWN_MS = 60 * 1000;
 
 export function NewsletterForm() {
   const [email, setEmail] = useState("");
@@ -28,6 +28,15 @@ export function NewsletterForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // rate limiting
+    const lastSubmit = localStorage.getItem(COOLDOWN_KEY);
+    if (lastSubmit && Date.now() - parseInt(lastSubmit, 10) < COOLDOWN_MS) {
+      setStatus("error");
+      setErrorMessage("Too many attempts. Try again soon.");
+      return;
+    }
+
     setStatus("loading");
 
     if (email.trim() === "") {
@@ -43,27 +52,26 @@ export function NewsletterForm() {
     }
 
     try {
-      const res = await fetch(
-        `https://api.convertkit.com/v3/forms/${NEWSLETTER_FORM_ID}/subscribe`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            api_key: CONVERTKIT_API_KEY,
-            email,
-          }),
-        }
-      );
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
 
       const data = await res.json();
-      if (data.subscription) {
+      if (data.success) {
+        localStorage.setItem(COOLDOWN_KEY, Date.now().toString());
         setStatus("success");
         setEmail("");
       } else {
+        console.error("Subscription failed: ", data);
         throw new Error("Subscription failed");
       }
-    } catch {
+    } catch (e) {
       setStatus("error");
+      console.error("Email signup failed: ", e);
       setErrorMessage("Something went wrong. Please try again");
     }
   };

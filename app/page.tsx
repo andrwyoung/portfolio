@@ -123,7 +123,7 @@ export default function Home() {
             className={activeHoverColor}
           />
           <SocialIcon
-            href="https://github.com/andrwyoung"
+            href="https://github.com/andrwyoung/portfolio"
             title="GitHub"
             icon={<FaGithub className="size-5.5" />}
             className={activeHoverColor}
