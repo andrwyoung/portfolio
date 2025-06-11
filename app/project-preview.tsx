@@ -4,6 +4,7 @@ import { projectStyles, ProjectType } from "@/types/project-styles";
 import { Button } from "@/components/button";
 import { projectContent } from "@/types/project-writeup";
 import { FaLink } from "react-icons/fa6";
+import Image from "next/image";
 
 export function ProjectPreview({ active }: { active: ProjectType }) {
   const style = projectStyles[active];
@@ -113,11 +114,15 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
               } gap-4 space-y-4`}
             >
               {content.screenshots.map((shot, i) => (
-                <img
-                  key={i}
+                <Image
                   src={shot.src}
                   alt={shot.alt}
-                  className={`mb-4 rounded-lg shadow w-full ${
+                  fill={false}
+                  width={0}
+                  height={0}
+                  key={i}
+                  sizes="100vw"
+                  className={`w-full h-auto mb-4 rounded-lg shadow ${
                     active === "mudboard" &&
                     "border-2 border-mudboard-secondary"
                   }`}
