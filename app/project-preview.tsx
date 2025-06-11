@@ -17,7 +17,7 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
       className: `text-2xl `,
     },
     {
-      title: "How did I grow?",
+      title: "Learnings",
       content: content.why,
       className: "text-2xl",
     },
@@ -27,7 +27,11 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
 
   return (
     <motion.div
-      className={`w-full h-full py-8 px-12 ${style.colors.background} ${style.colors.text} ${style.fonts.body} overflow-y-auto 
+      className={`w-full h-full py-8 px-12 ${style.colors.background} ${
+        style.colors.text
+      } ${style.fonts.body} ${
+        active === "pct" && "text-[1.0625rem] leading-normal"
+      }  overflow-y-auto 
       scrollbar-thin scrollbar-track-transparent relative`}
     >
       {/* <h2 className={`text-3xl mb-4 ${style.fonts.header}`}>{style.header}</h2> */}

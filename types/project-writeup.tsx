@@ -171,29 +171,24 @@ export const projectContent: Record<
   mudboard: {
     what: (
       <p>
-        In 2024, I started building <strong>Mudboard</strong> — a moodboarding
-        tool for artists who think in images, not files. I wanted something that
-        felt fast, tactile, and fluid. A space where I could drag in references,
-        sketch ideas, and rearrange everything until it made sense. Traditional
-        tools felt clunky or weren’t built for visual thinkers. So I made my
-        own.
+        <span className="font-semibold">Mudboard</span> is what I'm currently
+        working on. It's a{" "}
+        <span className="font-semibold">workspace + marketplace</span> for
+        collecting and organizing visual references with intuitive drag and
+        drop, sharable sections and artist-targeted tools. But also a space to{" "}
+        <span className="font-semibold">remix, explore and share</span> curated
+        galleries with others.
       </p>
     ),
     why: (
       <>
         <p>
-          I built Mudboard because most moodboarding tools aren’t made for how
-          artists actually think. They're either rigid (grids, folders, pins) or
-          bloated with features meant for product teams. I wanted something that
-          felt fast, fluid, and spatial — a tool that gets out of the way so
-          artists can stay in flow.
+          This project is really stretching me. Not simply technically or
+          designwise, but with everything that comes with building a business:
+          copywriting, business strategy, positioning, outreach, scalabity.
         </p>
         <p className="mt-4">
-          But I also kept coming back to one missing piece: reuse. I didn’t just
-          want a canvas — I wanted to build a system. A way to save and remix
-          reference packs, share curated sections with others, and treat
-          moodboarding as an evolving creative language. That’s the vision for
-          Mudboard.
+          I think I have a good shot, and I'm excited to share where this leads!
         </p>
       </>
     ),
@@ -204,7 +199,7 @@ export const projectContent: Record<
         content: (
           <ul className="space-y-0.5">
             <InlineLinkListItem
-              label="Decision Making"
+              label="Decisions Write-up"
               links={[
                 "https://jondrew.notion.site/Mudboard-Writeup-1ff2e809fa4e80edb3d0cda40d499e4f?source=copy_link",
               ]}
@@ -291,29 +286,38 @@ export const projectContent: Record<
           </li>
         </ol>
         <p className="pt-4">
-          I think what I really learned was courage: moving forward despite
-          fear, and letting go of control when nothing felt certain. I didn’t
-          come off trail feeling more confident or self-assured. But I did learn
-          how to keep going anyway.
+          I think what I really learned was <strong>courage</strong>: moving
+          forward despite fear, and letting go of control when nothing felt
+          certain. I didn’t come off trail feeling more confident or
+          self-assured. But I did learn how to keep going anyway.
         </p>
       </>
     ),
     previewSections: [
       {
-        title: "Stats",
-        icon: <FaTree />,
+        title: "Reflections",
+        icon: <FaMountainSun />,
         content: (
-          <ul className="">
-            <li>- Longest day: 42.6 mi</li>
-            <li>- Total days: 105 days</li>
-            <li className="flex flex-col w-fit">
-              - Marathon days (26.2+ mi): 24
-              <span className="text-xs px-4 text-neutral-500">
-                (longest streak: 6 days)
-              </span>
-            </li>
-            <li>- Hitchhikes: 19</li>
-            <li>- Bears: 0</li>
+          <ul className="space-y-0.5">
+            <InlineLinkListItem
+              label="Daily Hiker Log"
+              links={[
+                "https://docs.google.com/spreadsheets/d/1vvdS_cpu703A6ODHuChUXefpH1-JA6VGIaMkT5ZDjHY/edit?gid=0#gid=0",
+              ]}
+              accentClass="text-pct-accent"
+            />
+            <InlineLinkListItem
+              label="Newsletter during the hike"
+              links={[
+                "https://blog.jonadrew.com/posts/wwn-pacific-crest-trail-8",
+              ]}
+              accentClass="text-pct-accent"
+            />
+            <InlineLinkListItem
+              label="After-hike reflection"
+              links={["https://medium.com/@andrwyoung/p-7544392c4daf"]}
+              accentClass="text-pct-accent"
+            />
           </ul>
         ),
       },
@@ -341,29 +345,20 @@ export const projectContent: Record<
         ),
       },
       {
-        title: "Reflections",
-        icon: <FaMountainSun />,
+        title: "Stats",
+        icon: <FaTree />,
         content: (
-          <ul className="space-y-0.5">
-            <InlineLinkListItem
-              label="Daily Hiker Log"
-              links={[
-                "https://docs.google.com/spreadsheets/d/1vvdS_cpu703A6ODHuChUXefpH1-JA6VGIaMkT5ZDjHY/edit?gid=0#gid=0",
-              ]}
-              accentClass="text-pct-accent"
-            />
-            <InlineLinkListItem
-              label="Newsletter during the hike"
-              links={[
-                "https://blog.jonadrew.com/posts/wwn-pacific-crest-trail-8",
-              ]}
-              accentClass="text-pct-accent"
-            />
-            <InlineLinkListItem
-              label="After-hike reflection"
-              links={["https://medium.com/@andrwyoung/p-7544392c4daf"]}
-              accentClass="text-pct-accent"
-            />
+          <ul className="">
+            <li>- Longest day: 42.6 mi</li>
+            <li>- Total days: 105 days</li>
+            <li className="flex flex-col w-fit">
+              - Marathon days (26.2+ mi): 24
+              <span className="text-xs px-4 text-neutral-500">
+                (longest streak: 6 days)
+              </span>
+            </li>
+            <li>- Hitchhikes: 19</li>
+            <li>- Bears: 0</li>
           </ul>
         ),
       },
