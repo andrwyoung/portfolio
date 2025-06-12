@@ -106,6 +106,7 @@ export function NewsletterForm() {
             hover:text-stone-600 hover:bg-white
             `}
             title="Subscribe"
+            data-umami-event="Subscribe Button Clicked"
           >
             <FaEnvelope />
           </button>

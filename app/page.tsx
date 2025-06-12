@@ -98,8 +98,10 @@ export default function Home() {
               const style = projectStyles[project];
 
               return (
-                <div
+                <button
                   key={project}
+                  type="button"
+                  data-umami-event={`${project} Button Clicked`}
                   className="flex gap-2 items-center group cursor-pointer hover:underline"
                   title={`View ${style.header}`}
                   onClick={() =>
@@ -111,16 +113,15 @@ export default function Home() {
                     borderColor={style.colors.border}
                     selected={isActive}
                   />
-                  <button
-                    type="button"
+                  <div
                     className={`text-md w-fit transition-all cursor-pointer
                   rounded-lg font-header duration-300 
                     ${isActive ? "underline underline-offset-2" : ""}
                 `}
                   >
                     {style.header}
-                  </button>
-                </div>
+                  </div>
+                </button>
               );
             }
           )}

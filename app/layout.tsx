@@ -139,6 +139,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="6586e2e2-2f22-44d5-b317-4fe886f21085"
+        />
+      </head>
       <body
         className={`
         ${kumbhSans.variable}

@@ -14,6 +14,7 @@ export function SocialIcon({
   return (
     <a
       href={href}
+      data-umami-event={`${title} Link Clicked`}
       target="_blank"
       rel="noopener noreferrer"
       title={title}
