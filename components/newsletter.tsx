@@ -101,7 +101,7 @@ export function NewsletterForm() {
               setStatus("idle");
             }}
             placeholder="Sign up for the newsletter"
-            className={` py-1.5 px-3 text-xs rounded-l-md 
+            className={` py-1.5 px-3 text-sm rounded-l-md 
             focus:outline-none transition-all duration-200 placeholder:text-stone-500`}
             aria-invalid={status === "error"}
             aria-describedby={

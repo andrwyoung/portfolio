@@ -67,13 +67,21 @@ export default function Home() {
         {/* <p className={`text-md mb-0.5 ${activeFontBody}`}>
           I like building and learning across disciplines.
         </p> */}
-        <p
+        {/* <p
           className={`mb-4 max-w-sm text-sm ${
             active ? "text-right" : "text-center"
           } ${activeFontBody} `}
         >
           I&apos;ve coded + designed products, and walked across the country.
           Come along for the journey to see what&apos;s next:
+        </p> */}
+        <p
+          className={`mb-4 max-w-sm text-sm ${
+            active ? "text-right" : "text-center"
+          } ${activeFontBody} `}
+        >
+          I like to learn and build things. From sewing a sleeping bag to
+          building a startup. Come for the journey!
         </p>
 
         <div className="flex gap-2 items-center mb-10">
