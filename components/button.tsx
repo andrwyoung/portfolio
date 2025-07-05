@@ -15,12 +15,12 @@ const buttonVariants = cva(
     variants: {
       variant: {
         mudboard:
-          "text-sm px-3 py-1 bg-transparent font-mudboard-header font-semibold outline-2 outline-white text-white hover:text-mudboard-accent hover:outline-mudboard-accent",
+          "text-md px-3 py-1 bg-transparent font-mudboard-header font-semibold outline-2 outline-white text-white hover:text-mudboard-accent hover:outline-mudboard-accent",
         concaly:
-          "text-sm px-3 py-1  text-concaly-primary-text font-semibold bg-concaly-secondary-lightest rounded-lg outline-2 outline-concaly-secondary hover:bg-concaly-secondary",
+          "text-md px-3 py-1  text-concaly-primary-text font-semibold bg-concaly-secondary-lightest rounded-lg outline-2 outline-concaly-secondary hover:bg-concaly-secondary",
         inquiryon:
-          "text-sm px-4 py-1 font-medium text-inquiryon-primary bg-inquiryon-accent hover:bg-inquiryon-accent hover:text-inquiryon-accent-foreground ",
-        pct: "",
+          "text-md px-4 py-1 font-medium text-inquiryon-primary bg-inquiryon-accent hover:bg-inquiryon-accent hover:text-inquiryon-accent-foreground ",
+        pct: "font-semibold hover:underline hover:text-pct-accent",
         jonadrew:
           "font-bold px-4 py-0.5  border-2 bg-jonadrew-accent border-jonadrew-accent hover:border-jonadrew-secondary hover:bg-jonadrew-accent/80",
       },

@@ -29,6 +29,7 @@ export const projectContent: Record<
       content: React.ReactNode;
     }[];
     columns?: number; // default is 1
+    header_image: string;
     screenshots?: { src: string; alt: string }[];
   }
 > = {
@@ -36,30 +37,27 @@ export const projectContent: Record<
     what: (
       <p>
         Concaly is a <strong>convention planning tool</strong> for artists to
-        find conventions and organize deadlines. It has filtering, search, a
-        custom built CMS + admin panel, calendar, and map. I designed and built
-        the app in 5 weeks — a month after picking up React.
+        find conventions and organize deadlines. Built from my own need for it
+        as an artist.
       </p>
     ),
     why: (
       <>
         <p>
           Building ConCaly marked my return to coding, and a fast track into
-          frontend dev and UI/UX. I had to <strong>learn a lot</strong> quickly
-          (and boy did I learn), but the tools felt light and familiar.
+          frontend dev and UI/UX. I had to <strong>learn a lot</strong> quickly.
         </p>
 
         <p className="mt-4">
-          Yet, as much as I learned from building, the hardest part of this
-          project was actually <strong>letting go</strong>. I had early traction
-          — people were interested, helping, and giving feedback.
+          As I was learning, I remembered why I started coding in the first
+          place: I realized I <strong>still love it</strong>. My experience as
+          an illustrator made picking up UI/UX feel natural, and I felt like I
+          found what I was made for.
         </p>
         <p className="mt-4">
-          But just as things picked up, I saw how much more potential{" "}
-          <strong>Mudboard</strong> had. I had to make the call to give up
-          something good to <strong>pursue something great</strong>. It wasn't
-          easy, but it taught me about prioritization, sacrifice, and
-          acknowledging my limits.
+          But as Concaly was gaining traction, I saw how much more potential{" "}
+          <strong>Mudboard</strong> had. The hard part was making the call to
+          give up something good to pursue something great.
         </p>
       </>
     ),
@@ -70,35 +68,43 @@ export const projectContent: Record<
         content: (
           <ul className="space-y-0.5">
             <InlineLinkListItem
-              label="Learnings Write-up"
+              label="Why did I stop"
               links={[
-                "https://jondrew.notion.site/ConCaly-Writeup-1e72e809fa4e80f7b714c8f6cf848809?source=copy_link",
+                "https://jondrew.notion.site/Why-I-Stopped-Building-Concaly-2232e809fa4e80939a29e6a053041c2c?source=copy_link",
               ]}
               accentClass="text-concaly-secondary-darker"
             />
-            <InlineLinkListItem
-              label="DevLog"
-              links={[
-                "https://jondrew.notion.site/1d12e809fa4e80f8a0c0eead1477afd8?v=1d12e809fa4e8060996d000c68b22fb2&source=copy_link",
-              ]}
-              accentClass="text-concaly-secondary-darker"
-            />
-            <InlineLinkListItem
+
+            {/* <InlineLinkListItem
               label="Loom Video Demo"
               links={[
                 "https://www.loom.com/share/8f9b7fa2c2c346adac5720249d4fb79a?sid=318c6f84-30f1-49ea-ada9-9327cac99ee4",
               ]}
               accentClass="text-concaly-secondary-darker"
-            />
+            /> */}
             <InlineLinkListItem
               label="Github"
               links={["https://github.com/andrwyoung/con-app"]}
               accentClass="text-concaly-secondary-darker"
             />
-            <InlineLinkListItem
+            {/* <InlineLinkListItem
+              label="DevLog"
+              links={[
+                "https://jondrew.notion.site/1d12e809fa4e80f8a0c0eead1477afd8?v=1d12e809fa4e8060996d000c68b22fb2&source=copy_link",
+              ]}
+              accentClass="text-concaly-secondary-darker"
+            /> */}
+            {/* <InlineLinkListItem
               label="Figma (Original Design)"
               links={[
                 "https://www.figma.com/design/M9GYa5tcarEDOCRDmONnZz/Convention-Searcher?node-id=0-1&t=TnlcqTw0QVP75NLy-1",
+              ]}
+              accentClass="text-concaly-secondary-darker"
+            /> */}
+            <InlineLinkListItem
+              label="Reflections"
+              links={[
+                "https://jondrew.notion.site/ConCaly-Writeup-1e72e809fa4e80f7b714c8f6cf848809?source=copy_link",
               ]}
               accentClass="text-concaly-secondary-darker"
             />
@@ -158,8 +164,9 @@ export const projectContent: Record<
         ),
       },
     ],
+    header_image: "/concaly/header.png",
     screenshots: [
-      { src: "/concaly/1.png", alt: "Map view" },
+      // { src: "/concaly/1.png", alt: "Map view" },
       { src: "/concaly/3.png", alt: "Calendar view" },
       { src: "/concaly/2.png", alt: "Selected Con" },
       { src: "/concaly/5.png", alt: "Edit Artist Alley Panel" },
@@ -171,11 +178,9 @@ export const projectContent: Record<
   mudboard: {
     what: (
       <p>
-        <span className="font-semibold">Mudboard</span> is what I'm currently
-        working on. It's a{" "}
-        <span className="font-semibold">workspace + marketplace</span> for
-        collecting and organizing images with drag and drop, sharable sections
-        and artist tools. But also a space to{" "}
+        <span className="font-semibold">Mudboard</span> is a{" "}
+        <span className="font-semibold">workspace </span> for collecting and
+        organizing images. And a space to{" "}
         <span className="font-semibold">remix, explore and share</span> curated
         galleries with others.
       </p>
@@ -253,6 +258,7 @@ export const projectContent: Record<
         ),
       },
     ],
+    header_image: "/mudboard/header.png",
     screenshots: [
       { src: "/mudboard/0.png", alt: "Gallery View" },
       // { src: "/mudboard/1.png", alt: "Gallery View 2" },
@@ -267,9 +273,7 @@ export const projectContent: Record<
       <p>
         In the summer of 2024, I thru-hiked the{" "}
         <strong>Pacific Crest Trail</strong> — a 2650 mile journey from Mexico
-        to Canada. I walked through the desert, slept in thunderstorms, forded
-        rivers and climbed the tallest peak in the continental US. I also sewed
-        the backpack, sleeping bag and tent that got me through the hike.
+        to Canada — using gear I made.
       </p>
     ),
     why: (
@@ -357,9 +361,7 @@ export const projectContent: Record<
             <li>- Total days: 105 days</li>
             <li className="flex flex-col w-fit">
               - Marathon days (26.2+ mi): 24
-              <span className="text-xs px-4 text-neutral-500">
-                (longest streak: 6 days)
-              </span>
+              <span className="text-xs px-4 ">(longest streak: 6 days)</span>
             </li>
             <li>- Hitchhikes: 19</li>
             <li>- Bears: 0</li>
@@ -368,6 +370,7 @@ export const projectContent: Record<
       },
     ],
     columns: 2,
+    header_image: "/pct/sample2.jpg",
     screenshots: [
       { src: "/pct/1.webp", alt: "Washington" },
       { src: "/pct/2.webp", alt: "California. Silver Lake" },
@@ -378,7 +381,7 @@ export const projectContent: Record<
       { src: "/pct/6.webp", alt: "Sierras" },
       { src: "/pct/7.webp", alt: "Oregon" },
       { src: "/pct/IMG_5756.webp", alt: "Oregon" },
-      { src: "/pct/IMG_5803.webp", alt: "Oregon" },
+      { src: "/pct/header.webp", alt: "Oregon" },
       { src: "/pct/IMG_5933.webp", alt: "Oregon" },
       { src: "/pct/9.webp", alt: "Washington. Mount Rainer" },
     ],
@@ -386,11 +389,10 @@ export const projectContent: Record<
   jonadrew: {
     what: (
       <p>
-        In September of 2022, I left my high-paying software job to pursue{" "}
-        <strong>illustration full-time</strong>. In the process, I learned
-        everything I didn’t know about publishing, client work, marketing, and
-        running a business. I illustrated book covers, worked on board games,
-        tabled at conventions, and created comics.
+        In September of 2022, I left my software job to pursue{" "}
+        <strong>illustration full-time</strong>. It's the hardest decision I've
+        ever made, but I learned so much about life, business and agency through
+        it.
       </p>
     ),
     why: (
@@ -461,7 +463,7 @@ export const projectContent: Record<
           <ul className="space-y-0.5">
             <li className="flex flex-col w-fit">
               - Clip Studio Paint Ex
-              <span className="text-xs px-4 text-neutral-500">
+              <span className="text-xs px-4 ">
                 (In the past have used Procreate, Photoshop and Krita)
               </span>
             </li>
@@ -472,6 +474,7 @@ export const projectContent: Record<
       },
     ],
     columns: 3,
+    header_image: "/jonadrew/header.webp",
     screenshots: [
       { src: "/jonadrew/4-26c.webp", alt: "Close-up portrait with brown eyes" },
       { src: "/jonadrew/9-25.webp", alt: "Still life of a cracked open egg" },

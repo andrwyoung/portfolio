@@ -17,6 +17,7 @@ export function InlineLinkListItem({
         {links.map((href, i) => (
           <a
             key={i}
+            data-umami-event={`__Aux Link Clicked: ${label}`}
             href={href}
             title={links.length > 1 ? `${label} link ${i + 1}` : label}
             target="_blank"

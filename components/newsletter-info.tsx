@@ -26,6 +26,7 @@ export default function NewsletterInfo() {
               target="_blank"
               rel="noopener noreferrer"
               className="underline text-secondary-text hover:text-secondary"
+              data-umami-event={`Past Posts Clicked`}
             >
               past posts here
             </a>

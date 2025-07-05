@@ -27,7 +27,7 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
 
   return (
     <motion.div
-      className={`w-full h-full py-8 px-6 sm:px-10 md:px-12 ${
+      className={`w-full h-full py-8 px-6 sm:px-10 md:px-12 pb-32 ${
         style.colors.background
       } ${style.colors.text} ${style.fonts.body} ${
         active === "pct" && "text-[1.0625rem] leading-normal"
@@ -35,7 +35,7 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
       scrollbar-thin scrollbar-track-transparent relative`}
     >
       {/* <h2 className={`text-3xl mb-4 ${style.fonts.header}`}>{style.header}</h2> */}
-      <div className="flex gap-8 items-center mb-4 ">
+      <div className="flex gap-8 items-center mb-8 ">
         {/* {style.logo_src && (
           <Image
             src={style.logo_src}
@@ -45,26 +45,49 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
             className="w-[24px] h-[24px]"
           />
         )} */}
-        <div className={`text-4xl ${style.fonts.logo}`}>{style.header}</div>
+        <a
+          href={style.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`text-4xl ${style.fonts.logo} ${style.colors.hover} transition-all hover:scale-105 duration-200
+          `}
+          title={style.link_accessible_cta}
+          aria-label={style.link_accessible_cta}
+        >
+          {style.header}
+        </a>
       </div>
 
+      <Image
+        src={content.header_image}
+        alt={`${style.header} Header Image`}
+        fill={false}
+        width={0}
+        height={0}
+        sizes="100vw"
+        className={`w-full h-auto rounded-lg shadow mb-12 ${
+          active === "mudboard" && "border-2 border-mudboard-secondary"
+        }`}
+      />
+
+      {/* 
       <div className=" mb-12">
         {style.link && (
           <a
             href={style.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block"
+            className={`inline-block hover:underline font-bold text-sm px-2 ${style.fonts.header}`}
+            data-umami-event={`${style.header} Upper Website Clicked`}
+            title="Click to go to Website"
           >
-            <Button variant={active} className={style.fonts.header}>
-              Go to Website
-            </Button>
+            Website
           </a>
         )}
-      </div>
+      </div> */}
 
       <div className={``}>
-        <div className={`max-w-xl space-y-6 mb-8`}>
+        <div className={`max-w-xl space-y-6 mb-12`}>
           {sections.map(({ title, content, className }, i) => (
             <section key={i}>
               <h2
@@ -77,6 +100,26 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
               <div className={style.fonts.body}>{content}</div>
             </section>
           ))}
+        </div>
+
+        <div className=" mb-12">
+          <a
+            href={style.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={style.link_accessible_cta}
+            aria-label={style.link_accessible_cta}
+            className="inline-block"
+          >
+            <Button
+              type="button"
+              variant={active}
+              className={style.fonts.header}
+              data-umami-event={`${style.header} Website Clicked`}
+            >
+              {style.link_cta}
+            </Button>
+          </a>
         </div>
 
         <section className="grid gap-y-12 lg:gap-y-2  gap-x-4 grid-cols-1 lg:grid-cols-3 mb-16">

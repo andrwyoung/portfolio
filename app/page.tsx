@@ -12,13 +12,15 @@ import { NewsletterForm } from "@/components/newsletter";
 
 export default function Home() {
   const [active, setActive] = useState<ProjectType | null>(null);
-  const activeFontHeader = active
-    ? projectStyles[active].fonts.header
-    : "font-header";
+  // const activeFontHeader = active
+  //   ? projectStyles[active].fonts.header
+  //   : "font-header";
+  const activeFontHeader = "font-header";
 
-  const activeFontBody = active
-    ? projectStyles[active].fonts.body
-    : "font-body";
+  // const activeFontBody = active
+  //   ? projectStyles[active].fonts.body
+  //   : "font-body";
+  const activeFontBody = "font-body";
 
   const activeHoverColor = active
     ? projectStyles[active]?.colors?.hover || ""
@@ -66,11 +68,9 @@ export default function Home() {
           I like building and learning across disciplines.
         </p> */}
         <p
-          className={`mb-4 max-w-sm ${
+          className={`mb-4 max-w-sm text-sm ${
             active ? "text-right" : "text-center"
-          } ${activeFontBody} 
-          
-          ${active === "pct" ? "text-md leading-tight" : "text-sm"}`}
+          } ${activeFontBody} `}
         >
           I&apos;ve coded + designed products, and walked across the country.
           Come along for the journey to see what&apos;s next:
@@ -173,11 +173,12 @@ export default function Home() {
           <motion.div key={active} className={`w-full md:w-5/8`}>
             {/* Close button for mobile */}
             <button
-              className="fixed top-4 right-4 md:hidden z-100 
+              className="fixed top-4 right-4  z-100 
               bg-white/40 cursor-pointer p-1 rounded-lg
               text-neutral-800/80 hover:text-neutral-700"
               onClick={() => setActive(null)}
-              aria-label="Close preview"
+              aria-label="Close Preview"
+              title="Close Preview"
             >
               <FaXmark className="size-5" />
             </button>

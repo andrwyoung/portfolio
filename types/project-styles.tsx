@@ -3,7 +3,9 @@ export const projectStyles: Record<
   string,
   {
     header: string;
-    link?: string;
+    link: string;
+    link_cta: string;
+    link_accessible_cta: string;
     photos_link?: string;
     logo_src?: string;
     fonts: {
@@ -37,6 +39,8 @@ export const projectStyles: Record<
   concaly: {
     header: "ConCaly",
     link: "https://www.concaly.app",
+    link_cta: "Visit Concaly",
+    link_accessible_cta: "Visit Concaly Live Website",
     logo_src: "/concaly-logo.png",
     fonts: {
       logo: "font-concaly-logo",
@@ -68,6 +72,8 @@ export const projectStyles: Record<
   mudboard: {
     header: "Mudboard",
     link: "https://www.mudboard.com/",
+    link_cta: "Visit Mudboard",
+    link_accessible_cta: "Visit Mudboard Live Website",
     logo_src: "/mudboard-logo.png",
     fonts: {
       logo: "font-mudboard-logo",
@@ -99,6 +105,9 @@ export const projectStyles: Record<
   },
   pct: {
     header: "Pacific Crest Trail",
+    link: "https://docs.google.com/spreadsheets/d/1vvdS_cpu703A6ODHuChUXefpH1-JA6VGIaMkT5ZDjHY/edit?gid=0#gid=0",
+    link_cta: "View Hiker Log",
+    link_accessible_cta: "View PCT Hiker Log Spreadsheet",
     photos_link:
       "https://www.flickr.com/photos/198687848@N05/albums/72177720320026879",
     fonts: {
@@ -130,6 +139,8 @@ export const projectStyles: Record<
   },
   jonadrew: {
     header: "Jonadrew",
+    link_cta: "Visit Portfolio",
+    link_accessible_cta: "Visit Jonadrew Portfolio",
     link: "https://www.jonadrew.com/",
     fonts: {
       logo: "font-jonadrew-logo",

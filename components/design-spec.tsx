@@ -9,7 +9,7 @@ export function DesignSpec({ activeProject }: { activeProject: string }) {
 
   return (
     <div
-      className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm 
+      className="fixed bottom-4 right-4 bg-white/20 backdrop-blur-sm 
     gap-4 px-4 py-2 rounded-lg shadow text-sm flex flex-row justify-between 
     h-22"
     >
