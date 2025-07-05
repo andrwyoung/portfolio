@@ -4,11 +4,20 @@ import { FaInfoCircle } from "react-icons/fa";
 export default function NewsletterInfo() {
   return (
     <Popover.Root>
-      <Popover.Trigger title="Click to learn about Newsletter" asChild>
-        <FaInfoCircle className="cursor-pointer text-neutral-600" />
+      <Popover.Trigger asChild>
+        <button
+          type="button"
+          aria-describedby="newsletter-info"
+          aria-label="Learn more about the newsletter"
+          title="Learn more about the newsletter"
+          className="cursor-pointer text-neutral-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 rounded-full p-1"
+        >
+          <FaInfoCircle aria-hidden="true" focusable="false" />
+        </button>
       </Popover.Trigger>
       <Popover.Portal>
         <Popover.Content
+          id="newsletter-info-content"
           side="top"
           sideOffset={4}
           className={`z-50 rounded-lg bg-primary p-3 shadow-md text-sm text-stone-800 
@@ -27,6 +36,8 @@ export default function NewsletterInfo() {
               rel="noopener noreferrer"
               className="underline text-secondary-text hover:text-secondary"
               data-umami-event={`Past Posts Clicked`}
+              title="View past newsletter posts"
+              aria-label="View past newsletter posts on Jonadrew’s blog"
             >
               past posts here
             </a>

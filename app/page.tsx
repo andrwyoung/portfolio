@@ -103,7 +103,7 @@ export default function Home() {
                   type="button"
                   data-umami-event={`${project} Button Clicked`}
                   className="flex gap-2 items-center group cursor-pointer hover:underline"
-                  title={`View ${style.header}`}
+                  title={`Open Chapter: ${style.header}`}
                   onClick={() =>
                     setActive((prev) => (prev === project ? null : project))
                   }
@@ -130,19 +130,19 @@ export default function Home() {
         <div className="flex gap-4 items-center mb-1">
           <SocialIcon
             href="mailto:yong.andrew11@gmail.com"
-            title="Email"
+            title="Send email to Andrew"
             icon={<MdEmail className="size-6" />}
             className={activeHoverColor}
           />
           <SocialIcon
             href="https://github.com/andrwyoung/portfolio"
-            title="GitHub"
+            title="Visit Andrew's GitHub"
             icon={<FaGithub className="size-5.5" />}
             className={activeHoverColor}
           />
           <SocialIcon
             href="https://linkedin.com/in/andrwyoung"
-            title="LinkedIn"
+            title="Visit Andrew's LinkedIn"
             icon={<FaLinkedin className="size-5.5" />}
             className={activeHoverColor}
           />

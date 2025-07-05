@@ -79,8 +79,17 @@ export function NewsletterForm() {
   return (
     <div className="flex flex-col items-center gap-1 font-body">
       <div className="flex items-center gap-2">
+        <label
+          id="newsletter-label"
+          htmlFor="newsletter-input"
+          className="sr-only"
+        >
+          Enter your email to subscribe to the newsletter
+        </label>
+
         <form
           onSubmit={handleSubmit}
+          aria-describedby="newsletter-info"
           className="flex flex-row max-w-sm transition-all duration-200
         focus-within:ring-2 rounded-md focus-within:ring-stone-300 border-2 border-stone-600"
         >
@@ -94,6 +103,10 @@ export function NewsletterForm() {
             placeholder="Sign up for the newsletter"
             className={` py-1.5 px-3 text-xs rounded-l-md 
             focus:outline-none transition-all duration-200 placeholder:text-stone-500`}
+            aria-invalid={status === "error"}
+            aria-describedby={
+              status !== "idle" ? "newsletter-status" : undefined
+            }
           />
           <button
             type="submit"
@@ -105,7 +118,8 @@ export function NewsletterForm() {
             ${status === "loading" ? "opacity-60" : ""}
             hover:text-stone-600 hover:bg-white
             `}
-            title="Subscribe"
+            title="Subscribe to newsletter"
+            aria-label="Subscribe to newsletter"
             data-umami-event="Subscribe Button Clicked"
           >
             <FaEnvelope />
@@ -113,13 +127,19 @@ export function NewsletterForm() {
         </form>
         <NewsletterInfo />
       </div>
-      {status === "success" && (
-        <p className="text-green-600 text-xs">
-          Yay! Check your email for confirmation.
+      {(status === "success" || status === "error") && (
+        <p
+          id="newsletter-status"
+          className={`text-xs mt-1 ${
+            status === "success" ? "text-green-600" : "text-rose-500"
+          }`}
+          role="status"
+          aria-live="polite"
+        >
+          {status === "success"
+            ? "Yay! Check your email for confirmation."
+            : errorMessage}
         </p>
-      )}
-      {status === "error" && (
-        <p className="text-rose-500 text-xs">{errorMessage}</p>
       )}
     </div>
   );
