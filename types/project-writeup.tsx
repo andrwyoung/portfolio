@@ -50,7 +50,7 @@ export const projectContent: Record<
 
         <p className="mt-4">
           As I was learning, I remembered why I started coding in the first
-          place: I realized I <strong>still love it</strong>. My experience as
+          place: I realized <strong>I still love it</strong>. My experience as
           an illustrator made picking up UI/UX feel natural, and I felt like I
           found what I was made for.
         </p>

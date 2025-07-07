@@ -80,8 +80,8 @@ export default function Home() {
             active ? "text-right" : "text-center"
           } ${activeFontBody} `}
         >
-          I like to learn and build things. From sewing a sleeping bag to
-          building a startup. Come for the journey!
+          I like to learn and build things. From sewing my tent to building a
+          startup. Come for the journey!
         </p>
 
         <div className="flex gap-2 items-center mb-10">
