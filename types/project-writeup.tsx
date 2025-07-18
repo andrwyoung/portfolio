@@ -208,15 +208,24 @@ export const projectContent: Record<
         content: (
           <ul className="space-y-0.5">
             <InlineLinkListItem
-              label="Decisions Write-up"
+              label="Why should Mudboard Exist"
               links={[
-                "https://jondrew.notion.site/Mudboard-Writeup-1ff2e809fa4e80edb3d0cda40d499e4f?source=copy_link",
+                "https://jondrew.notion.site/Why-should-Mudboard-exist-2312e809fa4e80fa9114edece43d66de?source=copy_link",
               ]}
               accentClass="text-mudboard-accent"
             />
             <InlineLinkListItem
-              label="Interest Form"
-              links={["https://www.mudboard.com/get-involved"]}
+              label="Road Map"
+              links={[
+                "https://jondrew.notion.site/Mudboard-Roadmap-2162e809fa4e80eb94add8aa315c769d?source=copy_link",
+              ]}
+              accentClass="text-mudboard-accent"
+            />
+            <InlineLinkListItem
+              label="Pricing Commitment"
+              links={[
+                "https://jondrew.notion.site/Mudboard-Pricing-2332e809fa4e802dab4be35bb639e5d8?source=copy_link",
+              ]}
               accentClass="text-mudboard-accent"
             />
           </ul>
