@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
 import { DesignSpec } from "../components/design-spec";
-import { projectStyles, ProjectType } from "@/types/project-styles";
+import { projectStyles, ProjectType } from "@/config-files/project-styles";
 import { Button } from "@/components/button";
-import { projectContent } from "@/types/project-writeup";
+import { projectContent } from "@/config-files/project-writeup";
 import { FaLink } from "react-icons/fa6";
-import Image from "next/image";
+import { projectImages } from "@/config-files/project-images";
+import { BlurhashImage } from "@/components/blurhashed-image";
 
 export function ProjectPreview({ active }: { active: ProjectType }) {
   const style = projectStyles[active];
   const content = projectContent[active];
+  const images = projectImages[active];
 
   const sections = [
     {
@@ -58,16 +60,10 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
         </a>
       </div>
 
-      <Image
-        src={content.header_image}
-        alt={`${style.header} Header Image`}
-        fill={false}
-        width={0}
-        height={0}
-        sizes="100vw"
-        className={`w-full h-auto rounded-lg shadow mb-12 ${
-          active === "mudboard" && "border-2 border-mudboard-secondary"
-        }`}
+      <BlurhashImage
+        image={images.header_image}
+        className={`rounded-lg shadow mb-12 
+        `}
       />
 
       {/* 
@@ -159,7 +155,7 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
           </p>
         </div>
 
-        {content.screenshots && content.screenshots.length > 0 && (
+        {images.screenshots && images.screenshots.length > 0 && (
           <section>
             <h2
               className={`flex items-center gap-2 text-xl mb-4 font-semibold ${style.fonts.header}`}
@@ -184,18 +180,12 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
                 content.columns === 3 && "md:columns-2 xl:columns-3"
               } gap-4 space-y-4`}
             >
-              {content.screenshots.map((shot, i) => (
-                <Image
-                  src={shot.src}
-                  alt={shot.alt}
-                  fill={false}
-                  width={0}
-                  height={0}
+              {images.screenshots.map((shot, i) => (
+                <BlurhashImage
                   key={i}
-                  sizes="100vw"
-                  className={`w-full h-auto mb-4 rounded-lg shadow ${
-                    active === "mudboard" &&
-                    "border-2 border-mudboard-secondary"
+                  image={shot}
+                  className={`mb-4 rounded-md shadow-sm ${
+                    active === "mudboard" ? "mb-8" : "mb-4"
                   }`}
                 />
               ))}

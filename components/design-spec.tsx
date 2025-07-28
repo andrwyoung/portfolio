@@ -1,4 +1,4 @@
-import { projectStyles } from "@/types/project-styles";
+import { projectStyles } from "@/config-files/project-styles";
 
 export function DesignSpec({ activeProject }: { activeProject: string }) {
   const style = projectStyles[activeProject];

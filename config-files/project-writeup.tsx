@@ -1,11 +1,7 @@
 import {
   FaBook,
-  FaBookSkull,
-  FaBoxesStacked,
   FaCalendarDay,
   FaCloudShowersWater,
-  FaGasPump,
-  FaHammer,
   FaImages,
   FaLeaf,
   FaMountainSun,
@@ -29,8 +25,6 @@ export const projectContent: Record<
       content: React.ReactNode;
     }[];
     columns?: number; // default is 1
-    header_image: string;
-    screenshots?: { src: string; alt: string }[];
   }
 > = {
   concaly: {
@@ -75,32 +69,11 @@ export const projectContent: Record<
               accentClass="text-concaly-secondary-darker"
             />
 
-            {/* <InlineLinkListItem
-              label="Loom Video Demo"
-              links={[
-                "https://www.loom.com/share/8f9b7fa2c2c346adac5720249d4fb79a?sid=318c6f84-30f1-49ea-ada9-9327cac99ee4",
-              ]}
-              accentClass="text-concaly-secondary-darker"
-            /> */}
             <InlineLinkListItem
               label="Github"
               links={["https://github.com/andrwyoung/con-app"]}
               accentClass="text-concaly-secondary-darker"
             />
-            {/* <InlineLinkListItem
-              label="DevLog"
-              links={[
-                "https://jondrew.notion.site/1d12e809fa4e80f8a0c0eead1477afd8?v=1d12e809fa4e8060996d000c68b22fb2&source=copy_link",
-              ]}
-              accentClass="text-concaly-secondary-darker"
-            /> */}
-            {/* <InlineLinkListItem
-              label="Figma (Original Design)"
-              links={[
-                "https://www.figma.com/design/M9GYa5tcarEDOCRDmONnZz/Convention-Searcher?node-id=0-1&t=TnlcqTw0QVP75NLy-1",
-              ]}
-              accentClass="text-concaly-secondary-darker"
-            /> */}
             <InlineLinkListItem
               label="Reflections"
               links={[
@@ -163,15 +136,6 @@ export const projectContent: Record<
           </ul>
         ),
       },
-    ],
-    header_image: "/concaly/header.png",
-    screenshots: [
-      // { src: "/concaly/1.png", alt: "Map view" },
-      { src: "/concaly/3.png", alt: "Calendar view" },
-      { src: "/concaly/2.png", alt: "Selected Con" },
-      { src: "/concaly/5.png", alt: "Edit Artist Alley Panel" },
-      { src: "/concaly/4.png", alt: "Edit Convention Info Panel" },
-      { src: "/concaly/6.png", alt: "Suggestions/Updates page" },
     ],
   },
 
@@ -266,15 +230,6 @@ export const projectContent: Record<
           </ul>
         ),
       },
-    ],
-    header_image: "/mudboard/header.png",
-    screenshots: [
-      { src: "/mudboard/0.png", alt: "Gallery View" },
-      // { src: "/mudboard/1.png", alt: "Gallery View 2" },
-      { src: "/mudboard/2.png", alt: "Overlay Gallery View" },
-      { src: "/mudboard/3.png", alt: "Dashboard" },
-      { src: "/mudboard/4.png", alt: "Split Screen" },
-      { src: "/mudboard/5.png", alt: "Landing Page" },
     ],
   },
   pct: {
@@ -379,21 +334,6 @@ export const projectContent: Record<
       },
     ],
     columns: 2,
-    header_image: "/pct/sample2.jpg",
-    screenshots: [
-      { src: "/pct/1.webp", alt: "Washington" },
-      { src: "/pct/2.webp", alt: "California. Silver Lake" },
-      { src: "/pct/3.webp", alt: "Sierras. Forrester Pass" },
-      { src: "/pct/4.webp", alt: "Sierras" },
-      { src: "/pct/5.webp", alt: "Oregon" },
-      { src: "/pct/8.webp", alt: "Sierras" },
-      { src: "/pct/6.webp", alt: "Sierras" },
-      { src: "/pct/7.webp", alt: "Oregon" },
-      { src: "/pct/IMG_5756.webp", alt: "Oregon" },
-      { src: "/pct/header.webp", alt: "Oregon" },
-      { src: "/pct/IMG_5933.webp", alt: "Oregon" },
-      { src: "/pct/9.webp", alt: "Washington. Mount Rainer" },
-    ],
   },
   jonadrew: {
     what: (
@@ -483,56 +423,5 @@ export const projectContent: Record<
       },
     ],
     columns: 3,
-    header_image: "/jonadrew/header.webp",
-    screenshots: [
-      { src: "/jonadrew/4-26c.webp", alt: "Close-up portrait with brown eyes" },
-      { src: "/jonadrew/9-25.webp", alt: "Still life of a cracked open egg" },
-      { src: "/jonadrew/9-26.webp", alt: "Glass of water study with shadow" },
-      {
-        src: "/jonadrew/9-26b.webp",
-        alt: "Tangerine segments in warm lighting",
-      },
-      {
-        src: "/jonadrew/9-26c.webp",
-        alt: "Lemon slices on fabric in soft lighting",
-      },
-
-      {
-        src: "/jonadrew/9-26f.webp",
-        alt: "Still life of cracked egg with shell fragments",
-      },
-      {
-        src: "/jonadrew/9-26g.webp",
-        alt: "Egg yolk balanced between chopsticks",
-      },
-      {
-        src: "/jonadrew/4-26b.webp",
-        alt: "Portrait of woman in bandana looking upward",
-      },
-      {
-        src: "/jonadrew/9-26h.webp",
-        alt: "Spoon of honey dripping into a jar",
-      },
-      {
-        src: "/jonadrew/9-27b copy.webp",
-        alt: "Digital rendering of a faceted crystal gem",
-      },
-      {
-        src: "/jonadrew/10-2 try 2.webp",
-        alt: "Portrait of a bird with strong lighting",
-      },
-      {
-        src: "/jonadrew/4-26.webp",
-        alt: "Portrait of a girl with a neutral expression",
-      },
-      {
-        src: "/jonadrew/10-2.webp",
-        alt: "Digital rendering if toast!",
-      },
-      {
-        src: "/jonadrew/9-26e.webp",
-        alt: "Digital rendering of side profile of a hawk",
-      },
-    ],
   },
 };
