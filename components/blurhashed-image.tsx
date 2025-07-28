@@ -22,18 +22,23 @@ export function BlurhashImage({
       className={`relative w-full overflow-clip ${className}`}
       style={{ paddingBottom: `${aspectRatio}%` }}
     >
-      {!isLoaded && (
-        <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden">
-          <Blurhash
-            hash={blurhash}
-            width="100%"
-            height="100%"
-            resolutionX={32}
-            resolutionY={32}
-            punch={1}
-          />
-        </div>
-      )}
+      <div
+        className={`
+        absolute inset-0 w-full h-full rounded-lg overflow-hidden
+        transition-opacity duration-500 ${
+          isLoaded ? "opacity-0" : "opacity-100"
+        }
+        `}
+      >
+        <Blurhash
+          hash={blurhash}
+          width="100%"
+          height="100%"
+          resolutionX={32}
+          resolutionY={32}
+          punch={1}
+        />
+      </div>
 
       <Image
         src={src}
@@ -41,9 +46,7 @@ export function BlurhashImage({
         fill
         priority={priority}
         onLoad={() => setIsLoaded(true)}
-        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        }`}
+        className={`absolute top-0 left-0 w-full h-full`}
       />
     </div>
   );
