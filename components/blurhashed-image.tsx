@@ -3,15 +3,12 @@ import { Blurhash } from "react-blurhash";
 import Image from "next/image";
 import { ImageType } from "@/config-files/project-images";
 
-export function BlurhashImage({
-  image,
-  className = "",
-  priority = false,
-}: {
+type BlurhashImageProps = {
   image: ImageType;
   className?: string;
-  priority?: boolean;
-}) {
+};
+
+export function BlurhashImage({ image, className = "" }: BlurhashImageProps) {
   const { src, alt, height, width, blurhash } = image;
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -44,7 +41,6 @@ export function BlurhashImage({
         src={src}
         alt={alt}
         fill
-        priority={priority}
         onLoad={() => setIsLoaded(true)}
         className={`absolute top-0 left-0 w-full h-full`}
       />

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { DesignSpec } from "../components/design-spec";
 import { projectStyles, ProjectType } from "@/config-files/project-styles";
 import { Button } from "@/components/button";
@@ -27,7 +28,7 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
   if (!style) return null;
 
   return (
-    <div
+    <motion.div
       className={`w-full h-full py-8 px-6 sm:px-10 md:px-12 pb-32 ${
         style.colors.background
       } ${style.colors.text} ${style.fonts.body} ${
@@ -63,8 +64,23 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
         image={images.header_image}
         className={`rounded-lg shadow mb-12 
         `}
-        priority
       />
+
+      {/* 
+      <div className=" mb-12">
+        {style.link && (
+          <a
+            href={style.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-block hover:underline font-bold text-sm px-2 ${style.fonts.header}`}
+            data-umami-event={`${style.header} Upper Website Clicked`}
+            title="Click to go to Website"
+          >
+            Website
+          </a>
+        )}
+      </div> */}
 
       <div className={``}>
         <div className={`max-w-xl space-y-6 mb-12`}>
@@ -171,7 +187,6 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
                   className={`mb-4 rounded-md shadow-sm ${
                     active === "mudboard" ? "mb-8" : "mb-4"
                   }`}
-                  priority={i < 2} // priortiy load the first 2
                 />
               ))}
             </div>
@@ -182,6 +197,6 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
       <div className="hidden md:block">
         <DesignSpec activeProject={active} />
       </div>
-    </div>
+    </motion.div>
   );
 }
