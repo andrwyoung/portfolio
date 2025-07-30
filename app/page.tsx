@@ -9,6 +9,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { SocialIcon } from "@/components/social-icon";
 import FillingDot from "@/components/filled-dot";
 import { NewsletterForm } from "@/components/newsletter";
+import { projectImages } from "@/config-files/project-images";
+import Image from "next/image";
 
 export default function Home() {
   const [active, setActive] = useState<ProjectType | null>(null);
@@ -64,17 +66,7 @@ export default function Home() {
         >
           Andrew Yong
         </h1>
-        {/* <p className={`text-md mb-0.5 ${activeFontBody}`}>
-          I like building and learning across disciplines.
-        </p> */}
-        {/* <p
-          className={`mb-4 max-w-sm text-sm ${
-            active ? "text-right" : "text-center"
-          } ${activeFontBody} `}
-        >
-          I&apos;ve coded + designed products, and walked across the country.
-          Come along for the journey to see what&apos;s next:
-        </p> */}
+
         <p
           className={`mb-4 max-w-sm text-sm ${
             active ? "text-right" : "text-center"
@@ -155,25 +147,23 @@ export default function Home() {
             className={activeHoverColor}
           />
         </div>
-        {/* <div className="flex flex-row gap-2 font-header text-sm">
-          <a
-            href="https://www.jonadrew.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`cursor-pointer transition opacity-60 hover:opacity-100 ${activeHoverColor}`}
-          >
-            Illustration
-          </a>
-          <a
-            href="https://blog.jonadrew.com/profile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`cursor-pointer transition opacity-60 hover:opacity-100 ${activeHoverColor}`}
-          >
-            Blog
-          </a>
-        </div> */}
       </div>
+
+      {/* Preload all the header images */}
+      {(["mudboard", "concaly", "pct", "jonadrew"] as const).map((project) => {
+        const { src, alt, width, height } = projectImages[project].header_image;
+        return (
+          <Image
+            key={project}
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+            priority={false} // don't block other layout
+            style={{ display: "none" }}
+          />
+        );
+      })}
 
       {/* Right side: dynamic project preview */}
       <AnimatePresence mode="wait">

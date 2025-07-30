@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { DesignSpec } from "../components/design-spec";
 import { projectStyles, ProjectType } from "@/config-files/project-styles";
 import { Button } from "@/components/button";
@@ -28,7 +27,7 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
   if (!style) return null;
 
   return (
-    <motion.div
+    <div
       className={`w-full h-full py-8 px-6 sm:px-10 md:px-12 pb-32 ${
         style.colors.background
       } ${style.colors.text} ${style.fonts.body} ${
@@ -36,17 +35,7 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
       }  overflow-y-auto 
       scrollbar-thin scrollbar-track-transparent relative`}
     >
-      {/* <h2 className={`text-3xl mb-4 ${style.fonts.header}`}>{style.header}</h2> */}
       <div className="flex gap-8 items-center mb-8 ">
-        {/* {style.logo_src && (
-          <Image
-            src={style.logo_src}
-            alt={`${style.header} Logo`}
-            width={512}
-            height={512}
-            className="w-[24px] h-[24px]"
-          />
-        )} */}
         <a
           href={style.link}
           target="_blank"
@@ -65,22 +54,6 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
         className={`rounded-lg shadow mb-12 
         `}
       />
-
-      {/* 
-      <div className=" mb-12">
-        {style.link && (
-          <a
-            href={style.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`inline-block hover:underline font-bold text-sm px-2 ${style.fonts.header}`}
-            data-umami-event={`${style.header} Upper Website Clicked`}
-            title="Click to go to Website"
-          >
-            Website
-          </a>
-        )}
-      </div> */}
 
       <div className={``}>
         <div className={`max-w-xl space-y-6 mb-12`}>
@@ -197,6 +170,6 @@ export function ProjectPreview({ active }: { active: ProjectType }) {
       <div className="hidden md:block">
         <DesignSpec activeProject={active} />
       </div>
-    </motion.div>
+    </div>
   );
 }
