@@ -1,4 +1,7 @@
-export type ProjectType = "concaly" | "mudboard" | "pct" | "jonadrew";
+export const ALL_PROJECTS = ["concaly", "mudboard", "pct", "jonadrew"] as const;
+export type ProjectType = (typeof ALL_PROJECTS)[number];
+
+// export type ProjectType = "concaly" | "mudboard" | "pct" | "jonadrew";
 export const projectStyles: Record<
   string,
   {

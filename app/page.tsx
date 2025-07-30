@@ -2,7 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { ProjectPreview } from "./project-preview";
-import { projectStyles, ProjectType } from "@/config-files/project-styles";
+import {
+  ALL_PROJECTS,
+  projectStyles,
+  ProjectType,
+} from "@/config-files/project-styles";
 import { FaGithub, FaLinkedin, FaXmark } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { AnimatePresence, motion } from "framer-motion";
@@ -150,7 +154,7 @@ export default function Home() {
       </div>
 
       {/* Preload all the header images */}
-      {(["mudboard", "concaly", "pct", "jonadrew"] as const).map((project) => {
+      {ALL_PROJECTS.map((project) => {
         const { src, alt, width, height } = projectImages[project].header_image;
         return (
           <Image

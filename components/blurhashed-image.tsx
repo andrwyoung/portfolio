@@ -20,10 +20,10 @@ export function BlurhashImage({ image, className = "" }: BlurhashImageProps) {
       style={{ paddingBottom: `${aspectRatio}%` }}
     >
       <div
-        className="absolute inset-0 rounded-sm overflow-hidden"
+        className="absolute inset-0 rounded-sm overflow-hidden z-10"
         style={{
           opacity: isLoaded ? 0 : 1,
-          transition: `opacity ${isLoaded ? "0.2s ease-in" : "0s ease-out"}`,
+          transition: `opacity ${isLoaded ? "0.2s ease-out" : "0s ease-in"}`,
         }}
       >
         <Blurhash
@@ -40,7 +40,7 @@ export function BlurhashImage({ image, className = "" }: BlurhashImageProps) {
         alt={alt}
         fill
         onLoad={() => setIsLoaded(true)}
-        className={`absolute top-0 left-0 w-full h-full`}
+        className={`absolute top-0 left-0 w-full h-full z-0`}
       />
     </div>
   );
