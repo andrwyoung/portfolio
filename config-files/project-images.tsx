@@ -278,8 +278,7 @@ export const projectImages: Record<
       alt: "Quail Header",
       width: 2250,
       height: 979,
-      blurhash:
-        "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+      blurhash: "UCR{=E9t-q-p~DxGIoIo^+%2oefi4.X7xboL",
     },
     screenshots: [
       // {
@@ -319,8 +318,7 @@ export const projectImages: Record<
         alt: "Quail Drawing 1",
         width: 1076,
         height: 1010,
-        blurhash:
-          "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+        blurhash: "UCR{=E9t-q-p~DxGIoIo^+%2oefi4.X7xboL",
       },
 
       {
@@ -328,40 +326,35 @@ export const projectImages: Record<
         alt: "Quail Drawing 3",
         width: 2415,
         height: 1727,
-        blurhash:
-          "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+        blurhash: "UCR{=E9t-q-p~DxGIoIo^+%2oefi4.X7xboL",
       },
       {
         src: "/quail/paper2b.png",
         alt: "Quail Drawing 2",
         width: 1141,
         height: 1001,
-        blurhash:
-          "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+        blurhash: "UCR{=E9t-q-p~DxGIoIo^+%2oefi4.X7xboL",
       },
       {
         src: "/quail/contact.png",
         alt: "Quail Drawing 4",
         width: 1204,
         height: 983,
-        blurhash:
-          "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+        blurhash: "UCR{=E9t-q-p~DxGIoIo^+%2oefi4.X7xboL",
       },
       {
         src: "/quail/flower1b.png",
         alt: "Quail Drawing 6",
         width: 1479,
         height: 949,
-        blurhash:
-          "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+        blurhash: "UCR{=E9t-q-p~DxGIoIo^+%2oefi4.X7xboL",
       },
       {
         src: "/quail/pricing.png",
         alt: "Quail Drawing 5",
         width: 1505,
         height: 1068,
-        blurhash:
-          "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+        blurhash: "UCR{=E9t-q-p~DxGIoIo^+%2oefi4.X7xboL",
       },
     ],
   },
