@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ProjectPreview } from "./project-preview";
 import {
+  ACTIVE_PROJECTS,
   ALL_PROJECTS,
   projectStyles,
   ProjectType,
@@ -89,44 +90,42 @@ export default function Home() {
           Open a Chapter:
         </p>
         <div
-          className={`flex flex-col gap-2 mb-12 -translate-x-[1px] ${
-            active ? "items-end" : "items-center"
+          className={`flex flex-col mb-12 -translate-x-[1px] ${
+            active ? "items-end" : "items-start ml-4"
           }`}
         >
-          {(["mudboard", "concaly", "pct", "jonadrew"] as const).map(
-            (project) => {
-              const isActive = active === project;
-              const style = projectStyles[project];
+          {ACTIVE_PROJECTS.map((project) => {
+            const isActive = active === project;
+            const style = projectStyles[project];
 
-              return (
-                <SubtitleTooltip
-                  key={project}
-                  label={style.subtitle}
-                  onClick={() =>
-                    setActive((prev) => (prev === project ? null : project))
-                  }
-                  header={style.header}
-                  disabled={active !== null}
-                >
-                  <FillingDot
-                    color={style.colors.accent}
-                    borderColor={style.colors.border}
-                    selected={isActive}
-                  />
-                  <div className="flex flex-col">
-                    <div
-                      className={`text-md w-fit transition-all cursor-pointer
+            return (
+              <SubtitleTooltip
+                key={project}
+                label={style.subtitle}
+                onClick={() =>
+                  setActive((prev) => (prev === project ? null : project))
+                }
+                header={style.header}
+                disabled={active !== null}
+              >
+                <FillingDot
+                  color={style.colors.accent}
+                  borderColor={style.colors.border}
+                  selected={isActive}
+                />
+                <div className="flex flex-col">
+                  <div
+                    className={`text-md w-fit transition-all cursor-pointer
                   rounded-lg font-header duration-300 flex items-center gap-1.5
                     ${isActive ? "underline underline-offset-2" : ""}
                 `}
-                    >
-                      {style.header}
-                    </div>
+                  >
+                    {style.header}
                   </div>
-                </SubtitleTooltip>
-              );
-            }
-          )}
+                </div>
+              </SubtitleTooltip>
+            );
+          })}
         </div>
 
         <div className="flex gap-2 items-center mb-4">

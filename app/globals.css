@@ -6,7 +6,7 @@
   --foreground: #171717;
 
   --primary: #ffdebe;
-  --secondary: #8A86F9;
+  --secondary: #8a86f9;
   --secondary-text: #4e4ab1;
 
   --concaly-primary: oklch(0.9 0.0854 76.11);
@@ -28,18 +28,23 @@
   --inquiryon-accent: oklch(82.65% 0.0996 214.42);
   --inquiryon-accent-foreground: oklch(72.58% 0.097 214.54);
 
-  --pct-primary: #c8ecce; 
-  --pct-secondary: #91d2f2; 
+  --pct-primary: #c8ecce;
+  --pct-secondary: #91d2f2;
   --pct-text: #22423b;
   --pct-accent: #3791c9;
 
   --jonadrew-primary: #d4d6f4;
-  --jonadrew-secondary: #d47474; 
+  --jonadrew-secondary: #d47474;
   --jonadrew-text: #322242;
   --jonadrew-accent: #f7b67e;
 
+  --quail-primary: #f6f7f6;
+  --quail-secondary: #3fa796;
+  --quail-text: #0c1211;
+  --quail-accent: #dcc39d;
+
   --mudboard-primary: oklch(0.53 0.0351 20.8);
-  --mudboard-primary-lighter: oklch(0.60 0.031 20.8);
+  --mudboard-primary-lighter: oklch(0.6 0.031 20.8);
   --mudboard-primary-darker: oklch(0.43 0.0351 20.8);
   --mudboard-primary-text: oklch(1 0 0);
   --mudboard-primary-foreground: oklch(1 0 0);
@@ -55,22 +60,22 @@
 }
 
 @font-face {
-  font-family: 'Sansation';
-  src: url('/fonts/Sansation-Regular.ttf') format('truetype');
+  font-family: "Sansation";
+  src: url("/fonts/Sansation-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Sweety Rasty';
-  src: url('/fonts/sweety-rasty.otf') format('truetype');
+  font-family: "Sweety Rasty";
+  src: url("/fonts/sweety-rasty.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Sansation';
-  src: url('/fonts/Sansation-Bold.ttf') format('truetype');
+  font-family: "Sansation";
+  src: url("/fonts/Sansation-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -82,9 +87,9 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-secondary-text: var(--secondary-text);
- 
+
   --font-logo: var(--font-kumbh-sans);
-  --font-header: 'Sansation', sans-serif;
+  --font-header: "Sansation", sans-serif;
   --font-body: var(--font-figtree);
 
   --font-inquiryon-header: var(--font-inquiryon-header);
@@ -97,7 +102,7 @@
 
   --font-mudboard-header: var(--font-mudboard-header);
   --font-mudboard-body: var(--font-mudboard-body);
-  --font-mudboard-logo: 'Sweety Rasty', cursive;
+  --font-mudboard-logo: "Sweety Rasty", cursive;
   --font-mudboard-mono: var(--font-mudboard-mono);
 
   --font-pct-logo: var(--font-pct-logo);
@@ -108,6 +113,10 @@
   --font-jonadrew-logo: var(--font-jonadrew-logo);
   --font-jonadrew-header: var(--font-jonadrew-header);
   --font-jonadrew-body: var(--font-jonadrew-body);
+
+  --font-quail-logo: var(--font-literata);
+  --font-quail-header: var(--font-literata);
+  --font-quail-body: var(--font-mulish);
 
   --color-concaly-primary: var(--concaly-primary);
   --color-concaly-primary-darker: var(--concaly-primary-darker);
@@ -138,6 +147,11 @@
   --color-jonadrew-text: var(--jonadrew-text);
   --color-jonadrew-accent: var(--jonadrew-accent);
 
+  --color-quail-primary: var(--quail-primary);
+  --color-quail-secondary: var(--quail-secondary);
+  --color-quail-text: var(--quail-text);
+  --color-quail-accent: var(--quail-accent);
+
   --color-mudboard-primary: var(--mudboard-primary);
   --color-mudboard-primary-lighter: var(--mudboard-primary-lighter);
   --color-mudboard-primary-darker: var(--mudboard-primary-darker);
@@ -162,12 +176,10 @@
 }
 
 @layer utilities {
-
   /* .font-pct-body {
     font-family: var(--font-pct-body);
     font-size: 1.02rem;
   } */
-
 }
 /* 
 

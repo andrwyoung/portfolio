@@ -25,7 +25,7 @@ export default function SubtitleTooltip({
           aria-label={`Open Chapter: ${header}`}
           data-umami-event={`${header} Button Clicked`}
           //   title={`Open Chapter: ${header}`}
-          className="flex gap-2 items-center group cursor-pointer hover:underline"
+          className="flex gap-2 py-1 items-center group cursor-pointer hover:underline"
           onMouseEnter={() => !disabled && setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
           onClick={onClick}
@@ -37,7 +37,7 @@ export default function SubtitleTooltip({
         {isOpen && !disabled && (
           <Popover.Portal forceMount>
             <Popover.Content
-              side="right"
+              side="left"
               sideOffset={8}
               asChild
               className="z-50"
@@ -47,11 +47,15 @@ export default function SubtitleTooltip({
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 exit={{ opacity: 0, scale: 0.95, x: -5 }}
                 transition={{ duration: 0.15, ease: "easeOut" }}
-                className="rounded-lg bg-primary p-3 shadow-md text-sm text-stone-800 
-                  font-body focus-visible:outline-none max-w-48"
+                className={`rounded-lg bg-slate-100 p-3 shadow-md text-sm text-stone-800 
+                  font-body focus-visible:outline-none max-w-48`}
               >
                 {label}
-                <Popover.Arrow className="fill-primary" height={8} width={16} />
+                <Popover.Arrow
+                  className="fill-slate-100"
+                  height={8}
+                  width={16}
+                />
               </motion.div>
             </Popover.Content>
           </Popover.Portal>

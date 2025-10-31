@@ -1,5 +1,20 @@
-export const ALL_PROJECTS = ["concaly", "mudboard", "pct", "jonadrew"] as const;
+export const ALL_PROJECTS = [
+  "concaly",
+  "mudboard",
+  "pct",
+  "jonadrew",
+  "quail",
+] as const;
 export type ProjectType = (typeof ALL_PROJECTS)[number];
+
+// active projects in their correct odering
+export const ACTIVE_PROJECTS: ProjectType[] = [
+  "quail",
+  "mudboard",
+  "concaly",
+  "pct",
+  "jonadrew",
+] as const;
 
 // export type ProjectType = "concaly" | "mudboard" | "pct" | "jonadrew";
 export const projectStyles: Record<
@@ -175,6 +190,39 @@ export const projectStyles: Record<
       selected: "bg-jonadrew-accent",
       border: "border-jonadrew-accent",
       icon: "text-jonadrew-secondary",
+    },
+  },
+  quail: {
+    header: "Quail",
+    subtitle: "We're building tools to empower self motivated learners",
+    link_cta: "Visit Quail",
+    link_accessible_cta: "Visit Quail Website",
+    link: "https://www.readquail.com/",
+    fonts: {
+      logo: "font-quail-logo",
+      header: "font-quail-header",
+      body: "font-quail-body",
+    },
+    fontNames: {
+      logo: "Literata",
+      header: "Literata",
+      body: "Mulish",
+    },
+    fontSizes: {
+      logo: "text-[1rem] font-medium",
+      header: "text-[1rem] font-semibold",
+      body: "text-[1.00rem] font-medium",
+    },
+    colors: {
+      primary: "bg-quail-primary",
+      accent: "bg-quail-accent",
+      secondary: "bg-quail-secondary",
+      text: "text-quail-text",
+      background: "bg-quail-primary",
+      hover: "hover:text-quail-accent",
+      selected: "bg-quail-accent",
+      border: "border-quail-accent",
+      icon: "text-quail-secondary",
     },
   },
 };

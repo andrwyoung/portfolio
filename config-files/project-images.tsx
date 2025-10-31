@@ -230,6 +230,108 @@ export const projectImages: Record<
     ],
   },
 
+  quail: {
+    // header_image: {
+    //   src: "/quail/header.webp",
+    //   alt: "Quail Header",
+    //   width: 2250,
+    //   height: 1350,
+    //   blurhash:
+    //     "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+    // },
+    header_image: {
+      src: "/quail/header3.png",
+      alt: "Quail Header",
+      width: 2250,
+      height: 979,
+      blurhash:
+        "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+    },
+    screenshots: [
+      // {
+      //   src: "/quail/mockup1.webp",
+      //   alt: "Quail Screenshot 1",
+      //   width: 3674,
+      //   height: 5233,
+      //   blurhash:
+      //     "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+      // },
+      // {
+      //   src: "/quail/mockup2.webp",
+      //   alt: "Quail Screenshot 2",
+      //   width: 3674,
+      //   height: 5233,
+      //   blurhash:
+      //     "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+      // },
+      // {
+      //   src: "/quail/mockup3.webp",
+      //   alt: "Quail Screenshot 3",
+      //   width: 3674,
+      //   height: 5233,
+      //   blurhash:
+      //     "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+      // },
+      // {
+      //   src: "/quail/mockup4.webp",
+      //   alt: "Quail Screenshot 4",
+      //   width: 3674,
+      //   height: 5233,
+      //   blurhash:
+      //     "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+      // },
+      {
+        src: "/quail/phone2b.png",
+        alt: "Quail Drawing 1",
+        width: 1076,
+        height: 1010,
+        blurhash:
+          "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+      },
+
+      {
+        src: "/quail/books2.png",
+        alt: "Quail Drawing 3",
+        width: 2415,
+        height: 1727,
+        blurhash:
+          "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+      },
+      {
+        src: "/quail/paper2b.png",
+        alt: "Quail Drawing 2",
+        width: 1141,
+        height: 1001,
+        blurhash:
+          "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+      },
+      {
+        src: "/quail/contact.png",
+        alt: "Quail Drawing 4",
+        width: 1204,
+        height: 983,
+        blurhash:
+          "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+      },
+      {
+        src: "/quail/flower1b.png",
+        alt: "Quail Drawing 6",
+        width: 1479,
+        height: 949,
+        blurhash:
+          "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+      },
+      {
+        src: "/quail/pricing.png",
+        alt: "Quail Drawing 5",
+        width: 1505,
+        height: 1068,
+        blurhash:
+          "fKLEQ8_3~q?b?vt7IURjxu-;t7Rjj[fRWBRjofj[j[ayj[ayRjayofRjj[j[ofay",
+      },
+    ],
+  },
+
   jonadrew: {
     header_image: {
       src: "/jonadrew/header.webp",

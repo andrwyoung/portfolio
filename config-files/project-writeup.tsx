@@ -363,6 +363,96 @@ export const projectContent: Record<
     ],
     columns: 2,
   },
+  quail: {
+    what: (
+      <p>
+        <strong>Quail</strong> is a company aimed at helping self motivated
+        learners take control of how they learn, by creating tools that help you
+        learn topics <strong>as efficiently as possible</strong>.
+      </p>
+    ),
+    why: (
+      <>
+        <p className="mb-4">
+          Since my bottleneck for Mudboard was distribution, I decided to
+          partner with someone else who is really great at marketing and sales.
+          It's been really nice to have someone else to learn from.
+        </p>
+        <p className="mb-4">
+          Something that's strecthing me is having to think deeply about the
+          best architectural decisions for future coders (versus simply thinking
+          about execution like my previous products).
+        </p>
+        <p className="">
+          {" "}
+          It's rather fun to be able to work on something like this, and I'm
+          excited to see how the journey goes!
+        </p>
+      </>
+    ),
+    previewSections: [
+      // {
+      //   title: "Links",
+      //   icon: <FaEdit className="size-5" />,
+      //   content: (
+      //     <ul className="space-y-0.5">
+      //       <InlineLinkListItem
+      //         label="Github"
+      //         links={["https://github.com/yourusername/quail"]}
+      //         accentClass="text-quail-secondary"
+      //       />
+      //       <InlineLinkListItem
+      //         label="Live Site"
+      //         links={["https://www.example.com/quail"]}
+      //         accentClass="text-quail-secondary"
+      //       />
+      //     </ul>
+      //   ),
+      // },
+      {
+        title: "Progress",
+        icon: <FaCalendarDay />,
+        content: (
+          <ul className="space-y-0.5">
+            <li>
+              - <span className="font-semibold">M1:</span> Planning & Design
+            </li>
+            <li>
+              - <span className="font-semibold">M2:</span> MVP Released to the
+              app store
+            </li>
+            <li>
+              - <span className="font-semibold">M3:</span> Outreach and Feedback
+            </li>
+          </ul>
+        ),
+      },
+      {
+        title: "Stack",
+        icon: <FaPaintRoller />,
+        content: (
+          <ul className="space-y-0.5">
+            <li>
+              - Mobile App:{" "}
+              <span className="font-semibold">React Native + Expo</span>
+            </li>
+            <li>
+              - Landing Page: <span className="font-semibold">Next.js</span>
+            </li>
+            <li>
+              - Database:{" "}
+              <span className="font-semibold">SQLite + Drizzle. Supabase</span>
+            </li>
+            <li>
+              - Art: <span className="font-semibold">Jonadrew</span>
+            </li>
+          </ul>
+        ),
+      },
+    ],
+    columns: 3,
+  },
+
   jonadrew: {
     what: (
       <p>

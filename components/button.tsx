@@ -23,6 +23,8 @@ const buttonVariants = cva(
         pct: "font-semibold hover:underline hover:text-pct-accent",
         jonadrew:
           "font-bold px-4 py-0.5  border-2 bg-jonadrew-accent border-jonadrew-accent hover:border-jonadrew-secondary hover:bg-jonadrew-accent/80",
+        quail:
+          "text-md px-6 py-1.5 font-quail-header font-semibold text-quail-primary bg-quail-secondary rounded-md hover:bg-quail-secondary/90 shadow-lg shadow-primary/25 hover:-translate-y-0.5",
       },
     },
     defaultVariants: {

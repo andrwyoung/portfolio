@@ -17,6 +17,7 @@ import {
   Caveat_Brush,
   Quicksand,
   Maven_Pro,
+  Literata,
 } from "next/font/google";
 import "./globals.css";
 
@@ -132,6 +133,16 @@ const jonadrewBody = Maven_Pro({
   weight: ["400", "500", "600"],
 });
 
+// PROJECT: Quail
+
+const literata = Literata({
+  variable: "--font-literata",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
+// NOTE: using existing mulish for body
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -164,6 +175,7 @@ export default function RootLayout({
         ${jonadrewLogo.variable}
         ${jonadrewHeader.variable}
         ${jonadrewBody.variable}
+        ${literata.variable}
         antialiased
       `}
       >
