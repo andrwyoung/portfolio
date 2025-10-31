@@ -6,6 +6,7 @@ export const projectStyles: Record<
   string,
   {
     header: string;
+    subtitle: string;
     link: string;
     link_cta: string;
     link_accessible_cta: string;
@@ -41,6 +42,7 @@ export const projectStyles: Record<
 > = {
   concaly: {
     header: "ConCaly",
+    subtitle: "I created a Comic Con directory for Artists to find work",
     link: "https://www.concaly.app",
     link_cta: "Visit Concaly",
     link_accessible_cta: "Visit Concaly Live Website",
@@ -74,6 +76,7 @@ export const projectStyles: Record<
   },
   mudboard: {
     header: "Mudboard",
+    subtitle: "I built a business to help Artists resurface their inspiration",
     link: "https://www.mudboard.com/",
     link_cta: "Visit Mudboard",
     link_accessible_cta: "Visit Mudboard Live Website",
@@ -108,6 +111,7 @@ export const projectStyles: Record<
   },
   pct: {
     header: "Pacific Crest Trail",
+    subtitle: "I walked across the US in 4 months using gear I made myself",
     link: "https://docs.google.com/spreadsheets/d/1vvdS_cpu703A6ODHuChUXefpH1-JA6VGIaMkT5ZDjHY/edit?gid=0#gid=0",
     link_cta: "View Hiker Log",
     link_accessible_cta: "View PCT Hiker Log Spreadsheet",
@@ -142,6 +146,7 @@ export const projectStyles: Record<
   },
   jonadrew: {
     header: "Jonadrew",
+    subtitle: "I left my coorporate software job to become an illustrator",
     link_cta: "Visit Portfolio",
     link_accessible_cta: "Visit Jonadrew Portfolio",
     link: "https://www.jonadrew.com/",

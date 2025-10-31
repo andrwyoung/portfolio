@@ -15,6 +15,7 @@ import FillingDot from "@/components/filled-dot";
 import { NewsletterForm } from "@/components/newsletter";
 import { projectImages } from "@/config-files/project-images";
 import Image from "next/image";
+import SubtitleTooltip from "@/components/subtitle-tooltip";
 
 export default function Home() {
   const [active, setActive] = useState<ProjectType | null>(null);
@@ -80,10 +81,6 @@ export default function Home() {
           startup. Come for the journey!
         </p>
 
-        <div className="flex gap-2 items-center mb-10">
-          <NewsletterForm />
-        </div>
-
         {/* Project buttons */}
 
         <p
@@ -102,33 +99,38 @@ export default function Home() {
               const style = projectStyles[project];
 
               return (
-                <button
+                <SubtitleTooltip
                   key={project}
-                  type="button"
-                  data-umami-event={`${project} Button Clicked`}
-                  className="flex gap-2 items-center group cursor-pointer hover:underline"
-                  title={`Open Chapter: ${style.header}`}
+                  label={style.subtitle}
                   onClick={() =>
                     setActive((prev) => (prev === project ? null : project))
                   }
+                  header={style.header}
+                  disabled={active !== null}
                 >
                   <FillingDot
                     color={style.colors.accent}
                     borderColor={style.colors.border}
                     selected={isActive}
                   />
-                  <div
-                    className={`text-md w-fit transition-all cursor-pointer
-                  rounded-lg font-header duration-300 
+                  <div className="flex flex-col">
+                    <div
+                      className={`text-md w-fit transition-all cursor-pointer
+                  rounded-lg font-header duration-300 flex items-center gap-1.5
                     ${isActive ? "underline underline-offset-2" : ""}
                 `}
-                  >
-                    {style.header}
+                    >
+                      {style.header}
+                    </div>
                   </div>
-                </button>
+                </SubtitleTooltip>
               );
             }
           )}
+        </div>
+
+        <div className="flex gap-2 items-center mb-4">
+          <NewsletterForm />
         </div>
 
         <div className="flex gap-4 items-center mb-1">
