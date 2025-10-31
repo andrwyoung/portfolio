@@ -36,7 +36,7 @@ export default function NewsletterInfo() {
               side="top"
               sideOffset={4}
               asChild
-              className="z-50"
+              className="z-50 hidden sm:block "
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 5 }}

@@ -86,6 +86,7 @@ export function NewsletterForm() {
         >
           Enter your email to subscribe to the newsletter
         </label>
+        <NewsletterInfo />
 
         <form
           onSubmit={handleSubmit}
@@ -100,7 +101,7 @@ export function NewsletterForm() {
               setEmail(e.target.value);
               setStatus("idle");
             }}
-            placeholder="Sign up for the newsletter"
+            placeholder="Newsletter Signup"
             className={` py-1.5 px-3 text-sm rounded-l-md 
             focus:outline-none transition-all duration-200 placeholder:text-stone-500`}
             aria-invalid={status === "error"}
@@ -125,7 +126,6 @@ export function NewsletterForm() {
             <FaEnvelope />
           </button>
         </form>
-        <NewsletterInfo />
       </div>
       {(status === "success" || status === "error") && (
         <p

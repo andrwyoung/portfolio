@@ -40,7 +40,7 @@ export default function SubtitleTooltip({
               side="left"
               sideOffset={8}
               asChild
-              className="z-50"
+              className="z-50 hidden sm:block"
             >
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, x: -5 }}
