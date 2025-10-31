@@ -379,7 +379,7 @@ export const projectContent: Record<
           It's been really nice to have someone else to learn from.
         </p>
         <p className="mb-4">
-          Something that's strecthing me is having to think deeply about the
+          Something that's stretching me is having to think deeply about the
           best architectural decisions for future coders (versus simply thinking
           about execution like my previous products).
         </p>

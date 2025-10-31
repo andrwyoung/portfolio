@@ -11,7 +11,7 @@ export type ProjectType = (typeof ALL_PROJECTS)[number];
 export const ACTIVE_PROJECTS: ProjectType[] = [
   "quail",
   "mudboard",
-  "concaly",
+  // "concaly",
   "pct",
   "jonadrew",
 ] as const;

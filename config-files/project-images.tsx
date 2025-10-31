@@ -70,7 +70,7 @@ export const projectImages: Record<
 
   mudboard: {
     header_image: {
-      src: "/mudboard/header.png",
+      src: "/mudboard/0.png",
       alt: "Mudboard Header",
       width: 1663,
       height: 965,
@@ -78,29 +78,47 @@ export const projectImages: Record<
         "fUMjw69F9GIAM{RPMxxvWAWUt6W.?^RiRjV@RPxa-;MxoLkCWURj-;WAWUa#bIRk",
     },
     screenshots: [
+      // {
+      //   src: "/mudboard/0.png",
+      //   alt: "Gallery View",
+      //   width: 1665,
+      //   height: 965,
+      //   blurhash:
+      //     "fOKB2UIWIAIURhM_?wNHi^RORiax-;WAR,f5nin%~pMxIUogR,a#?bj=NGWBjvj]",
+      // },
+
+      // {
+      //   src: "/mudboard/2.png",
+      //   alt: "Overlay Gallery View",
+      //   width: 1665,
+      //   height: 965,
+      //   blurhash:
+      //     "fJHo2gMe00?HRQ~p%2RjRjt7WBj[M{t7t7WVxtRjj]ayRjj[ayWBIUt7%LayofWB",
+      // },
+      // {
+      //   src: "/mudboard/3.png",
+      //   alt: "Dashboard",
+      //   width: 1646,
+      //   height: 965,
+      //   blurhash:
+      //     "f6LXDD000000004o00~qbD?vNFD%00W--;%M.8%g00sp.9Ip?b?G00M{%gV[?b.8",
+      // },
+
       {
-        src: "/mudboard/0.png",
-        alt: "Gallery View",
-        width: 1665,
-        height: 965,
+        src: "/mudboard/s3.png",
+        alt: "Color Picker View",
+        width: 1611,
+        height: 907,
         blurhash:
           "fOKB2UIWIAIURhM_?wNHi^RORiax-;WAR,f5nin%~pMxIUogR,a#?bj=NGWBjvj]",
       },
       {
-        src: "/mudboard/2.png",
-        alt: "Overlay Gallery View",
-        width: 1665,
-        height: 965,
+        src: "/mudboard/s4.png",
+        alt: "Color Picker View",
+        width: 1611,
+        height: 907,
         blurhash:
-          "fJHo2gMe00?HRQ~p%2RjRjt7WBj[M{t7t7WVxtRjj]ayRjj[ayWBIUt7%LayofWB",
-      },
-      {
-        src: "/mudboard/3.png",
-        alt: "Dashboard",
-        width: 1646,
-        height: 965,
-        blurhash:
-          "f6LXDD000000004o00~qbD?vNFD%00W--;%M.8%g00sp.9Ip?b?G00M{%gV[?b.8",
+          "fOKB2UIWIAIURhM_?wNHi^RORiax-;WAR,f5nin%~pMxIUogR,a#?bj=NGWBjvj]",
       },
       {
         src: "/mudboard/4.png",
@@ -111,10 +129,26 @@ export const projectImages: Record<
           "fKNwNDIn00009GR7.8IUoLo0RPj]DP_4D%M{%eNYIAxubEW:bbWTD%-;RiV@t8WF",
       },
       {
-        src: "/mudboard/5.png",
+        src: "/mudboard/s2.png",
+        alt: "Color Picker View",
+        width: 1611,
+        height: 907,
+        blurhash:
+          "fOKB2UIWIAIURhM_?wNHi^RORiax-;WAR,f5nin%~pMxIUogR,a#?bj=NGWBjvj]",
+      },
+      {
+        src: "/mudboard/s1.png",
+        alt: "Color Picker View",
+        width: 1611,
+        height: 907,
+        blurhash:
+          "fOKB2UIWIAIURhM_?wNHi^RORiax-;WAR,f5nin%~pMxIUogR,a#?bj=NGWBjvj]",
+      },
+      {
+        src: "/mudboard/s5.png",
         alt: "Landing Page",
-        width: 1648,
-        height: 965,
+        width: 1597,
+        height: 902,
         blurhash:
           "f2Fr9YRp8yRkT[nl.7ohJOV[s.aM4UxH*GnQv,nmJ|My~XxbcWs;TuM}Q:nPt*nl",
       },
