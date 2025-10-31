@@ -152,25 +152,40 @@ export const projectContent: Record<
     why: (
       <>
         <p>
-          This project is really{" "}
-          <span className="font-semibold">stretching me</span>. Not simply
-          technically or designwise, but with everything that comes with
-          building a business: copywriting, business strategy, positioning,
-          outreach, scalabity.
+          This project really{" "}
+          <span className="font-semibold">stretched me</span>. Not only because
+          I implemented difficult UX features, but because of everything that
+          comes with building a business: copywriting, business strategy,
+          positioning, outreach, support.
+        </p>
+        <p className="mt-4 font-semibold">
+          It's difficult to be a solo founder.
         </p>
         <p className="mt-4">
-          I'm still getting started though, so I'm{" "}
-          <span className="font-semibold">excited to share</span> more about the
-          journey in the newsletter!
+          I learned just{" "}
+          <span className="font-semibold">how much work it takes</span> to get a
+          single user, but had the privilege and honor of seeing people fall in
+          love something that I built from nothing. What an gift that is!
+        </p>
+        <p className="mt-4">
+          I stopped pushing this project because I was really{" "}
+          <span className="font-semibold">struggling</span> with outreach, so I
+          decided to make it free. I still take feature requests every now and
+          then from the users that use Mudboard.
         </p>
       </>
     ),
     previewSections: [
       {
-        title: "Extra Links",
+        title: "Links",
         icon: <FaPaintBrush />,
         content: (
           <ul className="space-y-0.5">
+            <InlineLinkListItem
+              label="Github"
+              links={["https://github.com/andrwyoung/mudboard"]}
+              accentClass="text-mudboard-accent"
+            />
             <InlineLinkListItem
               label="Why should Mudboard Exist"
               links={[
@@ -185,26 +200,26 @@ export const projectContent: Record<
               ]}
               accentClass="text-mudboard-accent"
             />
-            <InlineLinkListItem
+            {/* <InlineLinkListItem
               label="Pricing Commitment"
               links={[
                 "https://jondrew.notion.site/Mudboard-Pricing-2332e809fa4e802dab4be35bb639e5d8?source=copy_link",
               ]}
               accentClass="text-mudboard-accent"
-            />
+            /> */}
           </ul>
         ),
       },
       {
-        title: "Progress",
+        title: "Results",
         icon: <FaLeaf />,
         content: (
           <ul className="space-y-0.5">
-            <li>- MVP built and launched</li>
-            <li>- Iterated through multiple testing rounds</li>
-            <li>- Strong early response</li>
-            <li>- Steady unprompted usage</li>
-            <li>- Moving into monetization</li>
+            <li>- Majority of the coding done in 2 months (~25k loc)</li>
+            <li>- Reached out to 500+ artists</li>
+            <li>- Demoed to ~100 users</li>
+            <li>- Kept around 10 DAU</li>
+            <li>- Made 40 bucks</li>
           </ul>
         ),
       },
@@ -214,9 +229,22 @@ export const projectContent: Record<
         content: (
           <ul className="space-y-0.5">
             <li>
+              - Design: <span className="font-semibold">Notebook</span>
+            </li>
+            <li>
               - Drag and Drop: <span className="font-semibold">Dnd Kit</span>
             </li>
             <li>
+              - Grid View: <span className="font-semibold">Custom</span>
+            </li>
+            <li>
+              - Freeform Canvas: <span className="font-semibold">Custom</span>
+            </li>
+            <li>
+              -{" "}
+              <span className="font-semibold">Supabase + Next.js + Vercel</span>
+            </li>
+            {/* <li>
               - Database and Auth:{" "}
               <span className="font-semibold">Supabase</span>
             </li>
@@ -226,7 +254,7 @@ export const projectContent: Record<
             </li>
             <li>
               - Hosting: <span className="font-semibold">Vercel</span>
-            </li>
+            </li> */}
           </ul>
         ),
       },

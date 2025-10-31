@@ -17,6 +17,13 @@ export default function NewsletterInfo() {
           className="cursor-pointer text-neutral-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 rounded-full p-1"
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
+          onClick={() =>
+            window.open(
+              "https://blog.jonadrew.com/profile",
+              "_blank",
+              "noopener,noreferrer"
+            )
+          }
         >
           <FaInfoCircle aria-hidden="true" focusable="false" />
         </button>
@@ -39,13 +46,13 @@ export default function NewsletterInfo() {
                 className="rounded-lg bg-primary p-3 shadow-md text-sm text-stone-800 
                   font-body w-64 focus-visible:outline-none"
               >
-                <p className="mb-1">
+                <p className="mb-2">
                   <strong>Every other Wednesday</strong> I share what I&apos;ve
                   been building, creating or thinking about with a few hundred
                   readers. Come join us!
                 </p>
-                <p className="mb-1">
-                  You can check out{" "}
+                <p className="mb-1 text-xs">
+                  {/* You can check out{" "}
                   <a
                     href="https://blog.jonadrew.com/profile"
                     target="_blank"
@@ -57,7 +64,14 @@ export default function NewsletterInfo() {
                   >
                     past posts here
                   </a>
-                  .
+                  . */}
+                  Click the{" "}
+                  <FaInfoCircle
+                    aria-hidden="true"
+                    focusable="false"
+                    className="inline"
+                  />{" "}
+                  to view past posts.
                 </p>
                 <Popover.Arrow className="fill-primary" height={8} width={16} />
               </motion.div>
