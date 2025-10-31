@@ -90,8 +90,8 @@ export default function Home() {
           Open a Chapter:
         </p>
         <div
-          className={`flex flex-col mb-12 -translate-x-[1px] ${
-            active ? "items-end" : "items-start ml-4"
+          className={`flex flex-col mb-12  ${
+            active ? "items-end" : "items-center mr-2"
           }`}
         >
           {ACTIVE_PROJECTS.map((project) => {
