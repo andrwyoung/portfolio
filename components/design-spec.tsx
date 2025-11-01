@@ -11,7 +11,7 @@ export function DesignSpec({ activeProject }: { activeProject: string }) {
     <div
       className="fixed bottom-4 right-4 bg-white/20 backdrop-blur-sm 
     gap-4 px-4 py-2 rounded-lg shadow text-sm flex flex-row justify-between 
-    h-22"
+    h-22 z-20"
     >
       <div className="flex flex-col justify-between font-header text-xs">
         {(["header", "body", "logo"] as const).map((type) => (
